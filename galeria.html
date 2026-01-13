@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Galería – Belén Carretero</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<header>
+  <h1>Galería</h1>
+  <nav class="ribbon">
+    <a href="index.html">Inicio</a>
+    <a href="galeria.html" class="active">Galería</a>
+    <a href="eventos.html">Eventos</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+</header>
+
+<main class="galeria-page">
+  <!-- Submenú vertical de categorías -->
+  <div class="subribbon-vertical">
+    <button class="categoria active" data-cat="todos">Todos</button>
+    <button class="categoria" data-cat="acuarela">Acuarelas</button>
+    <button class="categoria" data-cat="oleo">Óleo</button>
+    <button class="categoria" data-cat="acrilico">Acrílico</button>
+    <button class="categoria" data-cat="linoleo">Linóleo</button>
+    <button class="categoria" data-cat="carboncillo">Carboncillo</button>
+    <button class="categoria" data-cat="telas">Telas</button>
+    <button class="categoria" data-cat="papel">Papel</button>
+  </div>
+
+  <div class="galeria">
+    <!-- Título de categoría dinámico -->
+    <h2 id="titulo-categoria" style="margin-bottom:20px;">Todos</h2>
+
+    <div class="cuadro" data-cat="acuarela">
+      <img src="img/cuadro1.jpg" alt="Cuadro 1" data-descripcion="Acuarela 23x23 cm">
+    </div>
+    <div class="cuadro" data-cat="linoleo">
+      <img src="img/cuadro2.jpg" alt="Cuadro 2" data-descripcion="Linóleo y acuarela">
+    </div>
+    <div class="cuadro" data-cat="acrilico">
+      <img src="img/cuadro3.jpg" alt="Cuadro 3" data-descripcion="Acrílico sobre lienzo 100x73">
+    </div>
+    <div class="cuadro" data-cat="oleo,acrilico,carboncillo">
+      <img src="img/cuadro4.jpg" alt="Cuadro 4" data-descripcion="Acrílico, Óleo y Carboncillo sobre lienzo 73 x 100">
+    </div>
+  </div>
+</main>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox">
+  <span class="cerrar">&times;</span>
+  <img class="lightbox-img" src="" alt="">
+  <p class="lightbox-desc"></p>
+</div>
+
+<footer>
+  <p>© 2026 Belén Carretero</p>
+</footer>
+
+<script>
+  // ===== Lightbox =====
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.querySelector('.lightbox-img');
+  const lightboxDesc = document.querySelector('.lightbox-desc');
+  const cerrar = document.querySelector('.cerrar');
+
+  document.querySelectorAll('.galeria img').forEach(img => {
+    img.addEventListener('click', () => {
+      lightbox.style.display = 'flex';
+      lightboxImg.src = img.src;
+      lightboxDesc.textContent = img.dataset.descripcion;
+    });
+  });
+
+  cerrar.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+  });
+
+  lightbox.addEventListener('click', e => {
+    if(e.target === lightbox) lightbox.style.display = 'none';
+  });
+
+  // ===== Filtro por categoría =====
+  const categorias = document.querySelectorAll('.subribbon-vertical .categoria');
+  const cuadros = document.querySelectorAll('.galeria .cuadro');
+  const tituloCategoria = document.getElementById('titulo-categoria');
+
+  categorias.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Quitar clase active de todos los botones
+      categorias.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const cat = btn.dataset.cat;
+      cuadros.forEach(c => {
+        const cats = c.dataset.cat.split(',');
+        if(cat === 'todos' || cats.includes(cat)) {
+          c.style.display = 'block';
+        } else {
+          c.style.display = 'none';
+        }
+      });
+
+      // Actualizar título dinámico
+      tituloCategoria.textContent = btn.textContent;
+    });
+  });
+</script>
+
+</body>
+</html>
