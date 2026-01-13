@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -29,58 +29,46 @@
     </p>
   </section>
 
+  <!-- Formulario con Formspree -->
   <section style="margin-top: 30px; max-width: 600px;">
-  <form name="contacto" method="POST" data-netlify="true" style="display:flex; flex-direction:column; gap:15px;">
-    <input type="hidden" name="form-name" value="contacto">
+    <form action="https://formspree.io/f/yourFormID" method="POST" style="display:flex; flex-direction:column; gap:15px;">
+      <input
+        type="text"
+        name="nombre"
+        placeholder="Tu nombre"
+        required
+        style="width:100%; padding:10px; border-radius:6px; border:1px solid #ccc;"
+      >
 
-    <input
-      type="text"
-      name="nombre"
-      placeholder="Tu nombre"
-      required
-      style="width:100%; padding:10px; border-radius:6px; border:1px solid #ccc;"
-    >
+      <textarea
+        name="mensaje"
+        rows="6"
+        placeholder="Escribe tu mensaje aquí"
+        required
+        style="width:100%; padding:10px; border-radius:6px; border:1px solid #ccc;"
+      ></textarea>
 
-    <textarea
-      name="mensaje"
-      rows="6"
-      placeholder="Escribe tu mensaje aquí"
-      required
-      style="width:100%; padding:10px; border-radius:6px; border:1px solid #ccc;"
-    ></textarea>
+      <input
+        type="submit"
+        value="Enviar mensaje"
+        style="width:100%; padding:10px; border-radius:6px; border:none; background-color:#7fc7c9; color:white; font-weight:bold; cursor:pointer;"
+      >
+    </form>
+  </section>
 
-    <input
-      type="submit"
-      value="Enviar mensaje"
-      style="width:100%; padding:10px; border-radius:6px; border:none; background-color:#7fc7c9; color:white; font-weight:bold; cursor:pointer;"
-    >
-  </form>
-</section>
+  <section style="margin-top: 50px;">
+    <h2>Contacto directo</h2>
 
-<section style="margin-top: 50px;">
-  <h2>Contacto directo</h2>
-
-  <p>
-    <strong>Email:</strong>
-    <a href="mailto:belencarretero@telefonica.net">
-      belencarretero@telefonica.net
-    </a>
-  </p>
-
-  <p>
-    <strong>Instagram:</strong>
-    <a href="https://www.instagram.com/belencarretero" target="_blank">
-      @belencarretero
-    </a>
-  </p>
-
-  <p>
-    <strong>WhatsApp:</strong>
-    <a href="https://wa.me/34681090498" target="_blank">
-      681 090 498
-    </a>
-  </p>
-</section>
+    <p>
+      📧 Email: <a href="mailto:belencarretero@telefonica.net">belencarretero@telefonica.net</a>
+    </p>
+    <p>
+      📷 Instagram: <a href="https://www.instagram.com/belencarretero" target="_blank">@belencarretero</a>
+    </p>
+    <p>
+      🟢 WhatsApp: <a href="https://wa.me/34681090498" target="_blank">681 090 498</a>
+    </p>
+  </section>
 
 </main>
 
