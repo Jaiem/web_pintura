@@ -8,144 +8,155 @@
   box-sizing: border-box;
 }
 
-/* ===== Body y tipografía elegante ===== */
+/* ===== Body y tipografía ===== */
 body {
   font-family: 'Lora', serif;
-  background-color: #FBFAF7;
+  background-color: #fdfaf6;
   color: #333;
-  line-height: 1.7;
+  line-height: 1.75;
 }
 
 /* ===== Header ===== */
 header {
   background-color: #fff;
   padding: 30px 20px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.06);
 }
 
 header h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 2.8rem;
-  margin-bottom: 15px;
+  font-size: 3rem;
   color: #2c2c2c;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
 }
 
-/* ===== Ribbon/Tab Menu alineadas a la izquierda ===== */
+/* ===== Navegación ===== */
 nav.ribbon {
   display: flex;
   justify-content: flex-start;
-  gap: 15px;
-  margin-top: 10px;
+  gap: 18px;
   flex-wrap: wrap;
 }
 
 nav.ribbon a {
   text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 6px 6px 0 0;
-  background-color: #f5f2ee;
-  color: #444;
+  padding: 12px 22px;
+  border-radius: 8px 8px 0 0;
+  background-color: #f6f2ec;
+  color: #4a4a4a;
   font-weight: 500;
   transition: all 0.3s;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
 }
 
 nav.ribbon a:hover {
-  background-color: #e3ded6;
+  background-color: #e7dfd2;
   color: #222;
 }
 
 nav.ribbon a.active {
-  background-color: #d6cfc5;
+  background-color: #d6c8b6;
   color: #222;
+  font-weight: 600;
 }
 
 /* ===== Main ===== */
 main {
-  padding: 50px 20px;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 50px 20px;
 }
 
 /* ===== Introducción ===== */
 .intro {
-  text-align: left;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
 }
 
 .intro h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 2.2rem;
+  font-size: 2.6rem;
   color: #5b4d4b;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  border-left: 4px solid #b59b82;
+  padding-left: 12px;
 }
 
 .intro p {
-  max-width: 700px;
-  font-size: 1.15rem;
+  font-size: 1.18rem;
   color: #555;
   font-style: italic;
+  max-width: 720px;
+  margin-top: 10px;
 }
 
 /* ===== Galería ===== */
 .galeria {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
 }
 
 .galeria img {
   width: 100%;
   height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
   cursor: pointer;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .galeria img:hover {
-  transform: scale(1.04);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
 /* ===== Eventos ===== */
 .eventos h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: #5b4d4b;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .eventos p, .eventos ul {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   color: #555;
   margin-bottom: 25px;
 }
 
 .eventos ul li {
-  margin-bottom: 10px;
-  padding-left: 10px;
+  margin-bottom: 12px;
+  padding-left: 12px;
   list-style-type: disc;
 }
 
 /* ===== Contacto ===== */
 .contacto h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: #5b4d4b;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .contacto form input,
 .contacto form textarea {
   width: 100%;
   max-width: 500px;
-  padding: 12px 15px;
+  padding: 14px 18px;
   margin-bottom: 20px;
-  border-radius: 8px;
+  border-radius: 10px;
   border: 1px solid #ccc;
   font-size: 1rem;
   background-color: #fffaf7;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.contacto form input:focus,
+.contacto form textarea:focus {
+  outline: none;
+  border-color: #b59b82;
+  box-shadow: 0 0 10px rgba(181,155,130,0.3);
 }
 
 .contacto form input[type="submit"] {
@@ -153,55 +164,155 @@ main {
   color: #fff;
   border: none;
   cursor: pointer;
-  font-weight: bold;
-  padding: 12px 15px;
-  border-radius: 8px;
-  transition: background-color 0.3s;
+  font-weight: 600;
+  padding: 14px 18px;
+  border-radius: 10px;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 .contacto form input[type="submit"]:hover {
   background-color: #9c836f;
+  transform: translateY(-2px);
 }
 
 /* ===== Footer ===== */
 footer {
   text-align: center;
-  padding: 35px;
+  padding: 40px;
   font-size: 0.95rem;
   color: #888;
-  margin-top: 50px;
+  margin-top: 60px;
   border-top: 1px solid #eee;
   background-color: #fff;
+}
+
+/* ===== Lightbox ===== */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.lightbox-img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.5);
+}
+
+.lightbox-desc {
+  color: #fff;
+  font-size: 1.15rem;
+  text-align: center;
+  max-width: 800px;
+}
+
+.cerrar {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.cerrar:hover {
+  color: #ddd;
+}
+
+/* ===== Subribbon vertical ===== */
+.subribbon-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 160px;
+}
+
+.subribbon-vertical .categoria {
+  padding: 10px 18px;
+  background-color: #f6f2ec;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s;
+  text-align: left;
+}
+
+.subribbon-vertical .categoria:hover {
+  background-color: #e7dfd2;
+}
+
+.subribbon-vertical .categoria.active {
+  background-color: #d6c8b6;
+  color: #fff;
+}
+
+/* ===== Layout galería + submenú vertical ===== */
+.galeria-page {
+  display: flex;
+  align-items: flex-start;
+  gap: 25px;
+}
+
+.galeria-page .galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  flex: 1;
 }
 
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
   nav.ribbon {
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
   }
 
-  .intro {
-    text-align: center;
+  .galeria-page {
+    flex-direction: column;
   }
 
-  .contacto form input,
-  .contacto form textarea {
-    max-width: 100%;
+  .subribbon-vertical {
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 12px;
+    min-width: auto;
+    margin-bottom: 20px;
   }
 }
 
 @media (max-width: 480px) {
   header h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   nav.ribbon a {
-    padding: 8px 12px;
+    padding: 8px 14px;
     font-size: 0.95rem;
   }
 
   .galeria img {
-    border-radius: 6px;
+    border-radius: 8px;
+  }
+
+  .lightbox-desc {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+
+  .intro h2 {
+    font-size: 2rem;
   }
 }
