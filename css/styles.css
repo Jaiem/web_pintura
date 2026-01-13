@@ -1,35 +1,39 @@
-/* ===== Reset básico ===== */
+/* ===== Importar fuentes elegantes ===== */
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Playfair+Display:wght@400;700&display=swap');
+
+/* ===== Reset bÃ¡sico ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ===== Body y tipografía elegante ===== */
+/* ===== Body y tipografÃ­a elegante ===== */
 body {
-  font-family: 'Georgia', serif;
-  background-color: #fafaf7;
+  font-family: 'Lora', serif;
+  background-color: #FBFAF7;
   color: #333;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 /* ===== Header ===== */
 header {
-  background-color: #ffffff;
+  background-color: #fff;
   padding: 30px 20px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
 header h1 {
-  font-size: 2.4rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
   margin-bottom: 15px;
-  font-family: 'Palatino Linotype', Georgia, serif;
+  color: #2c2c2c;
 }
 
 /* ===== Ribbon/Tab Menu alineadas a la izquierda ===== */
 nav.ribbon {
   display: flex;
-  justify-content: flex-start; /* tabs alineadas a la izquierda */
+  justify-content: flex-start;
   gap: 15px;
   margin-top: 10px;
   flex-wrap: wrap;
@@ -39,39 +43,40 @@ nav.ribbon a {
   text-decoration: none;
   padding: 10px 20px;
   border-radius: 6px 6px 0 0;
-  background-color: #e8f0f2; /* color suave */
-  color: #333;
+  background-color: #f5f2ee;
+  color: #444;
   font-weight: 500;
-  transition: background-color 0.3s, color 0.3s;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: all 0.3s;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.03);
 }
 
 nav.ribbon a:hover {
-  background-color: #c0e0e3; /* color más destacado al pasar mouse */
+  background-color: #e3ded6;
   color: #222;
 }
 
 nav.ribbon a.active {
-  background-color: #a0d4d8; /* tab activa más visible */
+  background-color: #d6cfc5;
   color: #222;
 }
 
 /* ===== Main ===== */
 main {
-  padding: 40px 20px;
+  padding: 50px 20px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* ===== Introducción ===== */
+/* ===== IntroducciÃ³n ===== */
 .intro {
   text-align: left;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
 .intro h2 {
-  font-size: 2rem;
-  color: #5ba4a4; /* color principal suave */
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  color: #5b4d4b;
   margin-bottom: 15px;
 }
 
@@ -82,7 +87,7 @@ main {
   font-style: italic;
 }
 
-/* ===== Galería ===== */
+/* ===== GalerÃ­a ===== */
 .galeria {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -92,22 +97,23 @@ main {
 .galeria img {
   width: 100%;
   height: auto;
-  border-radius: 8px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
   cursor: pointer;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .galeria img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transform: scale(1.04);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
 /* ===== Eventos ===== */
 .eventos h2 {
-  font-size: 1.6rem;
-  color: #5ba4a4;
-  margin-bottom: 15px;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: #5b4d4b;
+  margin-bottom: 20px;
 }
 
 .eventos p, .eventos ul {
@@ -124,48 +130,52 @@ main {
 
 /* ===== Contacto ===== */
 .contacto h2 {
-  font-size: 1.6rem;
-  color: #5ba4a4;
-  margin-bottom: 15px;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: #5b4d4b;
+  margin-bottom: 20px;
 }
 
 .contacto form input,
 .contacto form textarea {
   width: 100%;
   max-width: 500px;
-  padding: 8px 12px;
-  margin-bottom: 15px;
-  border-radius: 6px;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
   border: 1px solid #ccc;
   font-size: 1rem;
+  background-color: #fffaf7;
 }
 
 .contacto form input[type="submit"] {
-  background-color: #7fc7c9; /* botón color suave */
+  background-color: #b59b82;
   color: #fff;
   border: none;
   cursor: pointer;
   font-weight: bold;
+  padding: 12px 15px;
+  border-radius: 8px;
   transition: background-color 0.3s;
 }
 
 .contacto form input[type="submit"]:hover {
-  background-color: #5ba4a4;
+  background-color: #9c836f;
 }
 
 /* ===== Footer ===== */
 footer {
   text-align: center;
-  padding: 25px;
-  font-size: 0.9rem;
+  padding: 35px;
+  font-size: 0.95rem;
   color: #888;
-  margin-top: 40px;
+  margin-top: 50px;
   border-top: 1px solid #eee;
   background-color: #fff;
 }
 
 /* ===== Responsive ===== */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   nav.ribbon {
     flex-direction: column;
     gap: 10px;
@@ -180,144 +190,10 @@ footer {
     max-width: 100%;
   }
 }
-/* ===== Lightbox ===== */
-.lightbox {
-  display: none;
-  position: fixed;
-  z-index: 999;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.8);
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 20px;
-}
-
-.lightbox-img {
-  max-width: 90%;
-  max-height: 80%;
-  border-radius: 8px;
-  margin-bottom: 15px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
-}
-
-.lightbox-desc {
-  color: #fff;
-  font-size: 1.1rem;
-  text-align: center;
-  max-width: 800px;
-}
-
-.cerrar {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  color: #fff;
-  font-size: 2rem;
-  cursor: pointer;
-  font-weight: bold;
-  transition: color 0.2s;
-}
-
-.cerrar:hover {
-  color: #ddd;
-}
-/* ===== Subribbon de categorías ===== */
-.subribbon {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
-}
-
-.subribbon .categoria {
-  padding: 8px 15px;
-  background-color: #e0f3f5;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: 500;
-  transition: background-color 0.3s;
-}
-
-.subribbon .categoria:hover {
-  background-color: #b9e2e5;
-}
-
-.subribbon .categoria.active {
-  background-color: #8ac9cc;
-  color: #fff;
-}
-/* ===== Subribbon vertical alineada a la izquierda (ajustada al borde) ===== */
-.subribbon-vertical {
-  display: flex;
-  flex-direction: column; /* vertical */
-  gap: 10px;
-  margin-right: 20px; /* espacio entre menú y galería */
-  margin-left: 0; /* mover al borde izquierdo */
-  padding-left: 0; /* quitar padding interno si lo había */
-  min-width: 150px; /* ancho fijo para el menú */
-}
-
-.subribbon-vertical .categoria {
-  padding: 8px 15px; /* padding interno de los botones */
-  background-color: #e0f3f5;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: 500;
-  transition: background-color 0.3s;
-  text-align: left;
-}
-
-.subribbon-vertical .categoria:hover {
-  background-color: #b9e2e5;
-}
-
-.subribbon-vertical .categoria.active {
-  background-color: #8ac9cc;
-  color: #fff;
-}
-
-/* ===== Layout galería + submenú vertical ===== */
-.galeria-page {
-  display: flex;
-  align-items: flex-start;
-  gap: 20px; /* espacio entre menú y galería */
-  margin-left: 0; /* asegurar que todo esté alineado al borde */
-}
-
-.galeria-page .galeria {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-  flex: 1; /* ocupar el resto del espacio */
-}
-
-/* ===== Responsive para móvil ===== */
-@media (max-width: 768px) {
-  .galeria-page {
-    flex-direction: column;
-  }
-
-  .subribbon-vertical {
-    flex-direction: row; /* horizontal en móvil */
-    overflow-x: auto;
-    gap: 10px;
-    margin-bottom: 15px;
-    min-width: auto;
-  }
-
-  .subribbon-vertical .categoria {
-    flex: 0 0 auto; /* que no se estiren demasiado */
-  }
-}
 
 @media (max-width: 480px) {
   header h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
   nav.ribbon a {
@@ -328,10 +204,4 @@ footer {
   .galeria img {
     border-radius: 6px;
   }
-
-  .lightbox-desc {
-    font-size: 1rem;
-    max-width: 90%;
-  }
 }
-belencarretero@telefonica.net
