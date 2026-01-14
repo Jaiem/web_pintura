@@ -14,9 +14,6 @@ body {
   background-color: #fdfaf6;
   color: #333;
   line-height: 1.75;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
 }
 
 /* ===== Header ===== */
@@ -66,14 +63,31 @@ nav.ribbon a.active {
 
 /* ===== Main ===== */
 main {
-  display: flex;
-  gap: 40px;
-  justify-content: flex-start;
-  align-items: flex-start;
-  margin-top: 40px;
-  flex: 1; /* Esto asegura que el contenido principal ocupe el espacio restante */
-  padding: 20px;
-  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+/* ===== Introducción ===== */
+.intro {
+  margin-bottom: 60px;
+}
+
+.intro h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.6rem;
+  color: #5b4d4b;
+  margin-bottom: 20px;
+  border-left: 4px solid #b59b82;
+  padding-left: 12px;
+}
+
+.intro p {
+  font-size: 1.18rem;
+  color: #555;
+  font-style: italic;
+  max-width: 720px;
+  margin-top: 10px;
 }
 
 /* ===== Layout papelería con menú lateral ===== */
@@ -83,7 +97,6 @@ main {
   align-items: flex-start; /* Alineación vertical a la parte superior */
   margin-top: 40px;
   justify-content: flex-start; /* Para asegurarnos que no se apilen */
-  flex-wrap: wrap;
 }
 
 /* Menú lateral vertical */
@@ -99,7 +112,6 @@ main {
   top: 30px;
   /* Aseguramos que el submenú no colapse en pantallas pequeñas */
   flex-shrink: 0; /* Evita que el submenú se reduzca */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Sombra para dar más definición */
 }
 
 /* Estilo de los botones en el submenú */
@@ -139,6 +151,11 @@ main {
   max-width: calc(100% - 220px); /* Esto evita que el texto se desborde y asegura que se ajusta */
 }
 
+.descripcion p {
+  font-size: 1.1rem;
+  font-style: italic; /* Para darle un toque similar al texto en el submenú */
+}
+
 /* Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
   .papeleria-page {
@@ -155,17 +172,4 @@ main {
     width: 100%;
     max-width: 100%;
   }
-}
-
-/* ===== Footer ===== */
-footer {
-  text-align: center;
-  padding: 40px;
-  font-size: 0.95rem;
-  color: #888;
-  margin-top: 60px;
-  border-top: 1px solid #eee;
-  background-color: #fff;
-  width: 100%; /* Aseguramos que el footer ocupa todo el ancho */
-  position: relative;
 }
