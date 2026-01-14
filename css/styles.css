@@ -185,7 +185,7 @@ footer {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
   margin-left: 0;           /* Elimina el centrado y alinea a la izquierda */
   margin-right: auto;       /* Permite que se quede pegado a la izquierda */
-  margin-top: 20px;         /* Da un poco de espacio desde el top */
+  margin-top: 5px;         /* Da un poco de espacio desde el top */
 }
 
 /* Estilo para cada campo de entrada (input y textarea) */
@@ -244,6 +244,7 @@ footer {
     max-width: 100%;
   }
 }
+
 
 
 
