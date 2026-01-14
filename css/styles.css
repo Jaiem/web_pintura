@@ -144,8 +144,7 @@ footer {
   border-top: 1px solid #eee;
   background-color: #fff;
 }
-
-/* ===== Menú Lateral Vertical - Subribbon ===== */
+/* ===== Subribbon vertical ===== */
 .subribbon-vertical {
   display: flex;
   flex-direction: column;
@@ -155,14 +154,14 @@ footer {
   padding: 20px;
   border-radius: 10px;
   position: sticky;
-  top: 30px; /* Fija el menú en la parte superior cuando hagas scroll */
-  left: 0;  /* Alinea el submenú completamente a la izquierda */
-  margin-left: 0; /* Asegura que el margen izquierdo sea cero */
-  width: 200px;  /* Controla el ancho del submenú */
-  z-index: 10;   /* Asegura que el submenú esté por encima de otros elementos */
+  top: 30px;
+  left: 0;
+  margin-left: 0;
+  width: 200px;
+  z-index: 10;
 }
 
-/* Estilo de los elementos dentro del submenú */
+/* Estilo de los botones en el submenú */
 .subribbon-vertical .categoria {
   padding: 15px 20px;
   background-color: #f6f2ec;
@@ -184,6 +183,25 @@ footer {
 .subribbon-vertical .categoria.active {
   background-color: #d6c8b6;
   color: #222;
+}
+
+/* ===== Descripción al lado del menú ===== */
+.descripcion {
+  margin-left: 220px;
+  font-size: 1.15rem;
+  color: #555;
+  padding: 15px;
+  background-color: #fffaf7;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 60%;
+  max-width: 600px;
+  margin-top: 30px;
+}
+
+.descripcion p {
+  font-size: 1.1rem;
+  font-style: italic;
 }
 
 /* ===== Layout papelería con menú lateral ===== */
@@ -219,3 +237,4 @@ footer {
     padding: 10px 15px;
   }
 }
+
