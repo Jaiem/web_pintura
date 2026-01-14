@@ -144,6 +144,7 @@ footer {
   border-top: 1px solid #eee;
   background-color: #fff;
 }
+
 /* ===== Layout papelería con menú lateral ===== */
 .papeleria-page {
   display: flex;
@@ -198,17 +199,17 @@ footer {
   font-size: 1.15rem;
   color: #555;
   padding: 15px;
-  background-color: #fffaf7;
-  border: 1px solid #ddd;
-  border-radius: 10px;
+  /* Eliminamos el fondo rosa y el borde */
+  background-color: transparent;
+  border: none;
   margin-top: 30px;
   max-width: 100%;
   width: 100%;
+  font-style: italic; /* Para darle un toque similar al texto en el submenú */
 }
 
 .descripcion p {
   font-size: 1.1rem;
-  font-style: italic;
 }
 
 /* Ajustes para pantallas pequeñas */
