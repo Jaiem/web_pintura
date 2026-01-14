@@ -1,115 +1,99 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Galería – Belén Carretero</title>
+  <title>Proceso artesanal | Belén Carretero</title>
   <link rel="stylesheet" href="css/styles.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
 <header>
-  <h1>Galería</h1>
+  <h1>Belén Carretero</h1>
   <nav class="ribbon">
-    <a href="index.html">Inicio</a>
-    <a href="galeria.html" class="active">Galería</a>
-    <a href="eventos.html">Eventos</a>
+    <a href="index.html">Mi historia</a>
+    <a href="proceso.html" class="active">Proceso artesanal</a>
+    <a href="invitaciones.html">Invitaciones personalizadas</a>
+    <a href="papeleria.html">Papelería de boda</a>
     <a href="contacto.html">Contacto</a>
   </nav>
 </header>
 
-<main class="galeria-page">
-  <!-- Submenú vertical de categorías -->
-  <div class="subribbon-vertical">
-    <button class="categoria active" data-cat="todos">Todos</button>
-    <button class="categoria" data-cat="acuarela">Acuarelas</button>
-    <button class="categoria" data-cat="oleo">Óleo</button>
-    <button class="categoria" data-cat="acrilico">Acrílico</button>
-    <button class="categoria" data-cat="linoleo">Linóleo</button>
-    <button class="categoria" data-cat="carboncillo">Carboncillo</button>
-    <button class="categoria" data-cat="telas">Telas</button>
-    <button class="categoria" data-cat="papel">Papel</button>
-  </div>
+<main class="proceso">
+  <section class="intro">
+    <h2>El valor del proceso</h2>
 
-  <div class="galeria">
-    <!-- Título de categoría dinámico -->
-    <h2 id="titulo-categoria" style="margin-bottom:20px;">Todos</h2>
+    <p>
+      Cada proyecto comienza mucho antes de que el papel exista. Empieza con
+      una conversación, una idea, una emoción que necesita tomar forma.
+      El proceso artesanal es lento, consciente y profundamente humano.
+    </p>
 
-    <div class="cuadro" data-cat="acuarela">
-      <img src="img/cuadro1.jpg" alt="Cuadro 1" data-descripcion="Acuarela 23x23 cm">
-    </div>
-    <div class="cuadro" data-cat="linoleo">
-      <img src="img/cuadro2.jpg" alt="Cuadro 2" data-descripcion="Linóleo y acuarela">
-    </div>
-    <div class="cuadro" data-cat="acrilico">
-      <img src="img/cuadro3.jpg" alt="Cuadro 3" data-descripcion="Acrílico sobre lienzo 100x73">
-    </div>
-    <div class="cuadro" data-cat="oleo,acrilico,carboncillo">
-      <img src="img/cuadro4.jpg" alt="Cuadro 4" data-descripcion="Acrílico, Óleo y Carboncillo sobre lienzo 73 x 100">
-    </div>
-  </div>
+    <h3>Escuchar y comprender</h3>
+    <p>
+      El primer paso es siempre el encuentro con el cliente. Hablamos de la
+      historia que hay detrás del evento, del estilo, de los colores, de las
+      sensaciones que se quieren transmitir. No se trata solo de diseñar,
+      sino de escuchar y comprender para crear algo auténtico.
+    </p>
+
+    <h3>Selección de materiales</h3>
+    <p>
+      El papel es el protagonista. Trabajo con fibras naturales, algodones y
+      materiales seleccionados por su calidad, textura y resistencia.
+      Cada elección influye en el resultado final: el grosor, el color,
+      el tacto y la forma en que la tinta se posa sobre la superficie.
+    </p>
+
+    <h3>Creación del papel artesanal</h3>
+    <p>
+      La fabricación del papel se realiza de manera manual. Las fibras se
+      preparan, se mezclan con agua y se transforman en pulpa. A través de un
+      proceso de formación hoja a hoja, el papel va tomando cuerpo y carácter.
+      Ninguna pieza es igual a otra, y esa singularidad es parte de su belleza.
+    </p>
+
+    <h3>Pruebas y ajustes</h3>
+    <p>
+      Una vez creado el papel, se realizan pruebas de impresión, color y
+      composición. Este momento es clave para ajustar detalles y asegurarnos
+      de que todo esté en armonía. El cliente forma parte activa de este
+      proceso, opinando y decidiendo junto a mí.
+    </p>
+
+    <h3>Diseño e impresión</h3>
+    <p>
+      El diseño se adapta al papel, nunca al revés. Ilustraciones, tipografías
+      y textos se trabajan para respetar la textura y la personalidad de cada
+      hoja. La impresión puede ser manual o con técnicas que mantengan el
+      carácter artesanal del proyecto.
+    </p>
+
+    <h3>Secado, corte y acabados</h3>
+    <p>
+      Tras la impresión, el papel necesita tiempo. Se deja secar, se corta
+      cuidadosamente y se revisa pieza a pieza. Los acabados finales, como
+      pliegues, hilos, lacres o detalles adicionales, se realizan a mano,
+      asegurando un resultado delicado y coherente.
+    </p>
+
+    <h3>Un proceso compartido</h3>
+    <p>
+      Todo el proceso se construye en diálogo. Crear papelería artesanal no
+      es un trabajo en solitario, sino una experiencia compartida donde cada
+      decisión suma y da sentido al resultado final.
+    </p>
+
+    <p>
+      El objetivo es crear piezas con alma, pensadas para durar en el
+      recuerdo y acompañar momentos que merecen ser celebrados con belleza
+      y cuidado.
+    </p>
+  </section>
 </main>
-
-<!-- Lightbox -->
-<div id="lightbox" class="lightbox">
-  <span class="cerrar">&times;</span>
-  <img class="lightbox-img" src="" alt="">
-  <p class="lightbox-desc"></p>
-</div>
 
 <footer>
   <p>© 2026 Belén Carretero</p>
 </footer>
-
-<script>
-  // ===== Lightbox =====
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImg = document.querySelector('.lightbox-img');
-  const lightboxDesc = document.querySelector('.lightbox-desc');
-  const cerrar = document.querySelector('.cerrar');
-
-  document.querySelectorAll('.galeria img').forEach(img => {
-    img.addEventListener('click', () => {
-      lightbox.style.display = 'flex';
-      lightboxImg.src = img.src;
-      lightboxDesc.textContent = img.dataset.descripcion;
-    });
-  });
-
-  cerrar.addEventListener('click', () => {
-    lightbox.style.display = 'none';
-  });
-
-  lightbox.addEventListener('click', e => {
-    if(e.target === lightbox) lightbox.style.display = 'none';
-  });
-
-  // ===== Filtro por categoría =====
-  const categorias = document.querySelectorAll('.subribbon-vertical .categoria');
-  const cuadros = document.querySelectorAll('.galeria .cuadro');
-  const tituloCategoria = document.getElementById('titulo-categoria');
-
-  categorias.forEach(btn => {
-    btn.addEventListener('click', () => {
-      // Quitar clase active de todos los botones
-      categorias.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      const cat = btn.dataset.cat;
-      cuadros.forEach(c => {
-        const cats = c.dataset.cat.split(',');
-        if(cat === 'todos' || cats.includes(cat)) {
-          c.style.display = 'block';
-        } else {
-          c.style.display = 'none';
-        }
-      });
-
-      // Actualizar título dinámico
-      tituloCategoria.textContent = btn.textContent;
-    });
-  });
-</script>
 
 </body>
 </html>
