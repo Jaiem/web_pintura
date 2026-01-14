@@ -97,6 +97,7 @@ main {
   align-items: flex-start; /* Alineación vertical a la parte superior */
   margin-top: 40px;
   justify-content: flex-start; /* Para asegurarnos que no se apilen */
+  flex-wrap: wrap; /* Permite que se ajusten los elementos si el espacio es limitado */
 }
 
 /* Menú lateral vertical */
@@ -111,6 +112,7 @@ main {
   position: sticky;
   top: 30px;
   flex-shrink: 0;
+  height: 100%; /* Asegura que el menú lateral tenga la altura completa */
 }
 
 /* Estilo de los botones en el submenú */
@@ -139,7 +141,7 @@ main {
 
 /* Descripción que aparece al lado del menú lateral */
 .descripcion {
-  flex: 1;
+  flex: 1; /* Esto asegura que la descripción ocupe el espacio restante */
   font-size: 1.15rem;
   color: #555;
   padding: 15px;
@@ -147,7 +149,7 @@ main {
   border: none;
   margin-top: 0; /* Aseguramos que no haya margen superior */
   width: 100%;
-  max-width: calc(100% - 220px); /* Para que no se desborde y se ajuste */
+  max-width: calc(100% - 220px); /* Esto asegura que la descripción no se desborde */
 }
 
 .descripcion p {
