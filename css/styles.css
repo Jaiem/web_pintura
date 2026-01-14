@@ -90,67 +90,13 @@ main {
   margin-top: 10px;
 }
 
-/* ===== Contacto ===== */
-.contacto h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2rem;
-  color: #5b4d4b;
-  margin-bottom: 25px;
-}
-
-.contacto form input,
-.contacto form textarea {
-  width: 100%;
-  max-width: 500px;
-  padding: 14px 18px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-  background-color: #fffaf7;
-  transition: border-color 0.3s, box-shadow 0.3s;
-}
-
-.contacto form input:focus,
-.contacto form textarea:focus {
-  outline: none;
-  border-color: #b59b82;
-  box-shadow: 0 0 10px rgba(181,155,130,0.3);
-}
-
-.contacto form input[type="submit"] {
-  background-color: #b59b82;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  font-weight: 600;
-  padding: 14px 18px;
-  border-radius: 10px;
-  transition: background-color 0.3s, transform 0.2s;
-}
-
-.contacto form input[type="submit"]:hover {
-  background-color: #9c836f;
-  transform: translateY(-2px);
-}
-
-/* ===== Footer ===== */
-footer {
-  text-align: center;
-  padding: 40px;
-  font-size: 0.95rem;
-  color: #888;
-  margin-top: 60px;
-  border-top: 1px solid #eee;
-  background-color: #fff;
-}
-
 /* ===== Layout papelería con menú lateral ===== */
 .papeleria-page {
   display: flex;
-  gap: 40px;
-  align-items: flex-start;
+  gap: 40px; /* Espacio entre el submenú y el texto descriptivo */
+  align-items: flex-start; /* Alineación vertical a la parte superior */
   margin-top: 40px;
+  justify-content: flex-start; /* Para asegurarnos que no se apilen */
 }
 
 /* Menú lateral vertical */
@@ -202,6 +148,7 @@ footer {
   border: none;
   margin-top: 0; /* Aseguramos que no haya margen superior */
   width: 100%; /* Se ajusta al 100% de su contenedor */
+  max-width: calc(100% - 220px); /* Esto evita que el texto se desborde y asegura que se ajusta */
 }
 
 .descripcion p {
@@ -223,6 +170,6 @@ footer {
   .descripcion {
     margin-top: 20px; /* Aseguramos que la descripción no se quede pegada al menú */
     width: 100%;
+    max-width: 100%;
   }
 }
-
