@@ -2,9 +2,8 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Papelería de boda | Belén Carretero</title>
+  <title>Papelería de boda | Un Prado Blanco</title>
   <link rel="stylesheet" href="css/styles.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
@@ -20,22 +19,9 @@
   </nav>
 </header>
 
-<main class="papeleria-page">
-
-  <!-- Menú lateral -->
-  <aside class="subribbon-vertical">
-    <button class="categoria">Minutas</button>
-    <button class="categoria">Meseros</button>
-    <button class="categoria">Marcasitios</button>
-    <button class="categoria">Seating plan</button>
-    <button class="categoria">Números zapatillas</button>
-    <button class="categoria">Regalos personalizados</button>
-  </aside>
-
-  <!-- Contenido principal -->
+<main class="papeleria">
   <section class="intro">
     <h2>Papelería de boda artesanal</h2>
-
     <p>
       La papelería de boda es el hilo que une cada momento del gran día.
       Pequeños detalles que hablan de vosotros, que acompañan y que hacen
@@ -55,22 +41,61 @@
       respetando los tiempos del proceso artesanal.
     </p>
 
-    <p>
-      Si tienes algo diferente en mente, una idea especial o un detalle que
-      todavía no sabes cómo materializar, estaré encantada de ayudarte.
-      Juntos daremos forma a una papelería de boda coherente, delicada y
-      completamente personalizada.
-    </p>
-  </section>
+    <h3>¿Qué puedo crear para tu boda?</h3>
 
+    <p>
+      Descubre algunos de los elementos que podemos diseñar juntos:
+    </p>
+
+    <div class="subribbon-vertical">
+      <button class="categoria" onclick="mostrarDescripcion('minutas')">Minutas</button>
+      <button class="categoria" onclick="mostrarDescripcion('meseros')">Meseros</button>
+      <button class="categoria" onclick="mostrarDescripcion('marcasitios')">Marcasitios</button>
+      <button class="categoria" onclick="mostrarDescripcion('seatingplan')">Seating Plan</button>
+      <button class="categoria" onclick="mostrarDescripcion('numeros')">Números y señalética</button>
+      <button class="categoria" onclick="mostrarDescripcion('regalos')">Regalos personalizados</button>
+    </div>
+
+    <!-- Aquí aparecerá la descripción -->
+    <div id="descripcion" class="descripcion"></div>
+  </section>
 </main>
 
 <footer>
   <p>© 2026 Belén Carretero</p>
 </footer>
 
+<script>
+  function mostrarDescripcion(item) {
+    var descripcion = '';
+    
+    switch (item) {
+      case 'minutas':
+        descripcion = '<p>Las minutas personalizadas para cada mesa, con un toque elegante y único, que complementa perfectamente el estilo de tu boda.</p>';
+        break;
+      case 'meseros':
+        descripcion = '<p>Meseros para la mesa, nunca unos números de zapatillas fueron tan elegantes. Cuidamos cada detalle para hacer que la decoración de tus mesas sea inolvidable.</p>';
+        break;
+      case 'marcasitios':
+        descripcion = '<p>Marcasitios personalizados que no solo guiarán a tus invitados, sino que serán el detalle perfecto para que tu boda se vea única.</p>';
+        break;
+      case 'seatingplan':
+        descripcion = '<p>Un seating plan artesanal, que hará que tus invitados se sientan especiales desde el momento en que vean cómo están organizados para el evento.</p>';
+        break;
+      case 'numeros':
+        descripcion = '<p>Números y señalética diseñados con materiales nobles y papeles artesanales para dar un toque personal y muy elegante a tu evento.</p>';
+        break;
+      case 'regalos':
+        descripcion = '<p>Regalos personalizados hechos a mano, perfectos para dejar una huella inolvidable en tus invitados. Un detalle único que reflejará el amor de tu boda.</p>';
+        break;
+      default:
+        descripcion = '<p>Selecciona un elemento para ver la descripción.</p>';
+    }
+
+    // Mostrar la descripción en el div correspondiente
+    document.getElementById('descripcion').innerHTML = descripcion;
+  }
+</script>
+
 </body>
 </html>
-
-
-
