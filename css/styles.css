@@ -69,10 +69,10 @@ main {
   max-width: 1200px;
   margin: 0 auto;
   padding: 50px 20px;
-  flex: 1; /* Esto asegura que el main ocupe el espacio restante */
+  flex: 1;
   display: flex;
-  gap: 40px; /* Espacio entre el submenú y la descripción */
-  flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
 /* ===== Layout papelería con menú lateral ===== */
@@ -80,7 +80,7 @@ main {
   display: flex;
   gap: 40px;
   align-items: flex-start;
-  flex-wrap: wrap; /* Esto asegura que los elementos no se desborden en pantallas pequeñas */
+  flex-wrap: wrap;
 }
 
 /* Menú lateral vertical */
@@ -94,7 +94,7 @@ main {
   border-radius: 10px;
   position: sticky;
   top: 30px;
-  flex-shrink: 0; /* Evita que el submenú se reduzca */
+  flex-shrink: 0;
 }
 
 /* Estilo de los botones en el submenú */
@@ -123,38 +123,21 @@ main {
 
 /* Descripción que aparece al lado del menú lateral */
 .descripcion {
-  flex: 1; /* Esto asegura que la descripción ocupe el espacio restante */
+  flex: 1;
   font-size: 1.15rem;
   color: #555;
   padding: 15px;
-  background-color: transparent; /* Fondo transparente */
+  background-color: transparent;
   border: none;
-  margin-top: 0; /* Aseguramos que no haya margen superior */
+  margin-top: 0;
   width: 100%;
-  max-width: calc(100% - 240px); /* Aseguramos que se ajuste al espacio disponible */
+  max-width: calc(100% - 240px);
 }
 
 .descripcion p {
   font-size: 1.1rem;
   font-style: italic;
-}
-
-/* Ajustes para pantallas pequeñas */
-@media (max-width: 768px) {
-  .papeleria-page {
-    flex-direction: column; /* En pantallas pequeñas, los elementos se apilan */
-  }
-
-  .subribbon-vertical {
-    width: 100%; /* El submenú ocupará todo el ancho en pantallas pequeñas */
-    max-width: 100%;
-  }
-
-  .descripcion {
-    margin-top: 20px; /* Aseguramos que la descripción no se quede pegada al menú */
-    width: 100%;
-    max-width: 100%;
-  }
+  color: #555; /* Mantener color de texto */
 }
 
 /* ===== Footer ===== */
@@ -166,6 +149,24 @@ footer {
   margin-top: 60px;
   border-top: 1px solid #eee;
   background-color: #fff;
-  width: 100%; /* Aseguramos que el footer ocupe todo el ancho */
+  width: 100%;
   position: relative;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+  .papeleria-page {
+    flex-direction: column;
+  }
+
+  .subribbon-vertical {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .descripcion {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 100%;
+  }
 }
