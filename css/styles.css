@@ -316,3 +316,66 @@ footer {
     font-size: 2rem;
   }
 }
+/* Layout papelería con menú lateral */
+.papeleria-page {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  margin-top: 40px;
+}
+
+/* Menú lateral vertical */
+.subribbon-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  min-width: 200px;
+}
+
+.subribbon-vertical .categoria {
+  padding: 15px 20px;
+  background-color: #f6f2ec;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #4a4a4a;
+  font-size: 1.1rem;
+  transition: all 0.3s;
+  text-align: left;
+}
+
+.subribbon-vertical .categoria:hover {
+  background-color: #e7dfd2;
+  color: #222;
+}
+
+.subribbon-vertical .categoria.active {
+  background-color: #d6c8b6;
+  color: #222;
+}
+
+/* Ajustes contenido principal */
+.papeleria {
+  flex: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .papeleria-page {
+    flex-direction: column;
+  }
+
+  .subribbon-vertical {
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 12px;
+    min-width: auto;
+    margin-bottom: 20px;
+  }
+
+  .subribbon-vertical .categoria {
+    font-size: 1rem;
+    padding: 10px 15px;
+  }
+}
