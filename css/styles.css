@@ -153,6 +153,14 @@ footer {
   margin-top: 40px;
 }
 
+/* ===== Layout papelería con menú lateral ===== */
+.papeleria-page {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  margin-top: 40px;
+}
+
 /* Menú lateral vertical */
 .subribbon-vertical {
   display: flex;
@@ -228,4 +236,3 @@ footer {
     width: 100%;
   }
 }
-
