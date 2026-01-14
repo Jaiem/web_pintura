@@ -14,13 +14,16 @@ body {
   background-color: #fdfaf6;
   color: #333;
   line-height: 1.75;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* ===== Header ===== */
 header {
   background-color: #fff;
   padding: 30px 20px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
 }
 
 header h1 {
@@ -47,7 +50,7 @@ nav.ribbon a {
   color: #4a4a4a;
   font-weight: 500;
   transition: all 0.3s;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
 }
 
 nav.ribbon a:hover {
@@ -66,37 +69,18 @@ main {
   max-width: 1200px;
   margin: 0 auto;
   padding: 50px 20px;
-}
-
-/* ===== Introducción ===== */
-.intro {
-  margin-bottom: 60px;
-}
-
-.intro h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.6rem;
-  color: #5b4d4b;
-  margin-bottom: 20px;
-  border-left: 4px solid #b59b82;
-  padding-left: 12px;
-}
-
-.intro p {
-  font-size: 1.18rem;
-  color: #555;
-  font-style: italic;
-  max-width: 720px;
-  margin-top: 10px;
+  flex: 1; /* Esto asegura que el main ocupe el espacio restante */
+  display: flex;
+  gap: 40px; /* Espacio entre el submenú y la descripción */
+  flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
 }
 
 /* ===== Layout papelería con menú lateral ===== */
 .papeleria-page {
   display: flex;
-  gap: 40px; /* Espacio entre el submenú y el texto descriptivo */
-  align-items: flex-start; /* Alineación vertical a la parte superior */
-  margin-top: 40px;
-  justify-content: flex-start; /* Para asegurarnos que no se apilen */
+  gap: 40px;
+  align-items: flex-start;
+  flex-wrap: wrap; /* Esto asegura que los elementos no se desborden en pantallas pequeñas */
 }
 
 /* Menú lateral vertical */
@@ -110,7 +94,6 @@ main {
   border-radius: 10px;
   position: sticky;
   top: 30px;
-  /* Aseguramos que el submenú no colapse en pantallas pequeñas */
   flex-shrink: 0; /* Evita que el submenú se reduzca */
 }
 
@@ -140,30 +123,30 @@ main {
 
 /* Descripción que aparece al lado del menú lateral */
 .descripcion {
-  flex: 1; /* Toma el espacio restante disponible */
+  flex: 1; /* Esto asegura que la descripción ocupe el espacio restante */
   font-size: 1.15rem;
   color: #555;
   padding: 15px;
   background-color: transparent; /* Fondo transparente */
   border: none;
   margin-top: 0; /* Aseguramos que no haya margen superior */
-  width: 100%; /* Se ajusta al 100% de su contenedor */
-  max-width: calc(100% - 220px); /* Esto evita que el texto se desborde y asegura que se ajusta */
+  width: 100%;
+  max-width: calc(100% - 240px); /* Aseguramos que se ajuste al espacio disponible */
 }
 
 .descripcion p {
   font-size: 1.1rem;
-  font-style: italic; /* Para darle un toque similar al texto en el submenú */
+  font-style: italic;
 }
 
 /* Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
   .papeleria-page {
-    flex-direction: column; /* En pantallas pequeñas, apilar los elementos */
+    flex-direction: column; /* En pantallas pequeñas, los elementos se apilan */
   }
 
   .subribbon-vertical {
-    width: 100%; /* El menú ocupará todo el ancho en pantallas pequeñas */
+    width: 100%; /* El submenú ocupará todo el ancho en pantallas pequeñas */
     max-width: 100%;
   }
 
@@ -172,4 +155,17 @@ main {
     width: 100%;
     max-width: 100%;
   }
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 40px;
+  font-size: 0.95rem;
+  color: #888;
+  margin-top: 60px;
+  border-top: 1px solid #eee;
+  background-color: #fff;
+  width: 100%; /* Aseguramos que el footer ocupe todo el ancho */
+  position: relative;
 }
