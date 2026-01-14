@@ -156,7 +156,7 @@ footer {
 /* ===== Layout papelería con menú lateral ===== */
 .papeleria-page {
   display: flex;
-  gap: 40px;
+  gap: 40px; /* Espacio entre el submenú y el texto descriptivo */
   align-items: flex-start;
   margin-top: 40px;
 }
@@ -207,17 +207,15 @@ footer {
   font-size: 1.15rem;
   color: #555;
   padding: 15px;
-  /* Eliminamos el fondo rosa y el borde */
-  background-color: transparent;
+  background-color: transparent; /* Fondo transparente */
   border: none;
-  margin-top: 30px;
-  max-width: 100%;
-  width: 100%;
-  font-style: italic; /* Para darle un toque similar al texto en el submenú */
+  margin-top: 0; /* Aseguramos que no haya margen superior */
+  width: 100%; /* Se ajusta al 100% de su contenedor */
 }
 
 .descripcion p {
   font-size: 1.1rem;
+  font-style: italic; /* Para darle un toque similar al texto en el submenú */
 }
 
 /* Ajustes para pantallas pequeñas */
@@ -236,3 +234,4 @@ footer {
     width: 100%;
   }
 }
+
