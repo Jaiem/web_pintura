@@ -199,7 +199,27 @@ footer {
   box-sizing: border-box; /* Considera el padding y el borde dentro del ancho */
   transition: border-color 0.3s ease;
 }
+/* Asegurar que la sección contacto-directo tenga el mismo margen que la sección intro */
+.contacto-directo {
+  margin-top: 30px;  /* Da un espacio por encima de la sección */
+  padding-left: 20px; /* Alinea a la izquierda con la introducción */
+  padding-right: 20px; /* Espacio a la derecha */
+  max-width: 1200px;   /* Limitar el ancho máximo para que todo quede bien alineado */
+  margin-left: auto;  /* Centra la sección */
+  margin-right: auto; /* Centra la sección */
+}
 
+/* Alinear todo el texto de contacto-directo a la izquierda */
+.contacto-directo p {
+  text-align: left;   /* Asegura que el texto esté alineado a la izquierda */
+  font-size: 1rem;    /* Ajusta el tamaño de la fuente si es necesario */
+}
+
+/* Estilo para los íconos de contacto-directo */
+.contacto-directo i {
+  margin-right: 8px;  /* Espacio entre los íconos y el texto */
+  color: #d6c8b6;     /* Color coherente con el diseño */
+}
 /* Cambio de color al enfocar los campos de entrada */
 .formulario-contacto input:focus,
 .formulario-contacto textarea:focus {
@@ -241,6 +261,7 @@ footer {
     max-width: 100%;
   }
 }
+
 
 
 
