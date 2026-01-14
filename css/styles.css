@@ -144,13 +144,12 @@ footer {
   border-top: 1px solid #eee;
   background-color: #fff;
 }
-
 /* ===== Layout papelería con menú lateral ===== */
 .papeleria-page {
   display: flex;
   gap: 40px;
-  margin-top: 40px;
   align-items: flex-start;
+  margin-top: 40px;
 }
 
 /* Menú lateral vertical */
@@ -164,6 +163,9 @@ footer {
   border-radius: 10px;
   position: sticky;
   top: 30px;
+  /* Aseguramos que el submenú no colapse en pantallas pequeñas */
+  max-width: 200px;
+  flex-shrink: 0; /* Evita que el submenú se reduzca */
 }
 
 /* Estilo de los botones en el submenú */
@@ -199,9 +201,9 @@ footer {
   background-color: #fffaf7;
   border: 1px solid #ddd;
   border-radius: 10px;
-  width: 60%;
-  max-width: 600px;
   margin-top: 30px;
+  max-width: 100%;
+  width: 100%;
 }
 
 .descripcion p {
@@ -212,36 +214,17 @@ footer {
 /* Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
   .papeleria-page {
-    flex-direction: column;
+    flex-direction: column; /* En pantallas pequeñas, apilar los elementos */
   }
 
   .subribbon-vertical {
     width: 100%; /* El menú ocupará todo el ancho en pantallas pequeñas */
+    max-width: 100%;
   }
 
   .descripcion {
     margin-top: 20px; /* Aseguramos que la descripción no se quede pegada al menú */
     width: 100%;
-  }
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .papeleria-page {
-    flex-direction: column;
-  }
-
-  .subribbon-vertical {
-    flex-direction: row;
-    overflow-x: auto;
-    gap: 12px;
-    min-width: auto;
-    margin-bottom: 20px;
-  }
-
-  .subribbon-vertical .categoria {
-    font-size: 1rem;
-    padding: 10px 15px;
   }
 }
 
