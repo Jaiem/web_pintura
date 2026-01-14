@@ -157,7 +157,7 @@ footer {
 .papeleria-page {
   display: flex;
   gap: 40px; /* Espacio entre el submenú y el texto descriptivo */
-  align-items: flex-start;
+  align-items: flex-start; /* Alineación vertical a la parte superior */
   margin-top: 40px;
 }
 
@@ -173,7 +173,6 @@ footer {
   position: sticky;
   top: 30px;
   /* Aseguramos que el submenú no colapse en pantallas pequeñas */
-  max-width: 200px;
   flex-shrink: 0; /* Evita que el submenú se reduzca */
 }
 
@@ -234,4 +233,3 @@ footer {
     width: 100%;
   }
 }
-
