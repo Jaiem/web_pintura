@@ -14,9 +14,6 @@ body {
   background-color: #fdfaf6;
   color: #333;
   line-height: 1.75;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
 }
 
 /* ===== Header ===== */
@@ -69,18 +66,37 @@ main {
   max-width: 1200px;
   margin: 0 auto;
   padding: 50px 20px;
-  flex: 1;
-  display: flex;
-  gap: 40px;
-  flex-wrap: wrap;
+}
+
+/* ===== Introducción ===== */
+.intro {
+  margin-bottom: 60px;
+}
+
+.intro h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.6rem;
+  color: #5b4d4b;
+  margin-bottom: 20px;
+  border-left: 4px solid #b59b82;
+  padding-left: 12px;
+}
+
+.intro p {
+  font-size: 1.18rem;
+  color: #555;
+  font-style: italic;
+  max-width: 720px;
+  margin-top: 10px;
 }
 
 /* ===== Layout papelería con menú lateral ===== */
 .papeleria-page {
   display: flex;
-  gap: 40px;
-  align-items: flex-start;
-  flex-wrap: wrap;
+  gap: 40px; /* Espacio entre el submenú y el texto descriptivo */
+  align-items: flex-start; /* Alineación vertical a la parte superior */
+  margin-top: 40px;
+  justify-content: flex-start; /* Para asegurarnos que no se apilen */
 }
 
 /* Menú lateral vertical */
@@ -127,17 +143,17 @@ main {
   font-size: 1.15rem;
   color: #555;
   padding: 15px;
-  background-color: transparent;
+  background-color: transparent; /* Fondo transparente */
   border: none;
-  margin-top: 0;
+  margin-top: 0; /* Aseguramos que no haya margen superior */
   width: 100%;
-  max-width: calc(100% - 240px);
+  max-width: calc(100% - 220px); /* Para que no se desborde y se ajuste */
 }
 
 .descripcion p {
   font-size: 1.1rem;
-  font-style: italic;
-  color: #555; /* Mantener color de texto */
+  font-style: italic; /* Mantener el estilo en cursiva como antes */
+  color: #555; /* Restauramos el color */
 }
 
 /* ===== Footer ===== */
@@ -150,22 +166,21 @@ footer {
   border-top: 1px solid #eee;
   background-color: #fff;
   width: 100%;
-  position: relative;
 }
 
 /* Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
   .papeleria-page {
-    flex-direction: column;
+    flex-direction: column; /* En pantallas pequeñas, apilar los elementos */
   }
 
   .subribbon-vertical {
-    width: 100%;
+    width: 100%; /* El menú ocupará todo el ancho en pantallas pequeñas */
     max-width: 100%;
   }
 
   .descripcion {
-    margin-top: 20px;
+    margin-top: 20px; /* Aseguramos que la descripción no se quede pegada al menú */
     width: 100%;
     max-width: 100%;
   }
