@@ -1,115 +1,76 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Galería – Belén Carretero</title>
+  <title>Papelería de boda | Belén Carretero</title>
   <link rel="stylesheet" href="css/styles.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
 <header>
-  <h1>Galería</h1>
+  <h1>Belén Carretero</h1>
   <nav class="ribbon">
-    <a href="index.html">Inicio</a>
-    <a href="galeria.html" class="active">Galería</a>
-    <a href="eventos.html">Eventos</a>
+    <a href="index.html">Mi historia</a>
+    <a href="proceso.html">Proceso artesanal</a>
+    <a href="invitaciones.html">Invitaciones personalizadas</a>
+    <a href="papeleria.html" class="active">Papelería de boda</a>
     <a href="contacto.html">Contacto</a>
   </nav>
 </header>
 
-<main class="galeria-page">
-  <!-- Submenú vertical de categorías -->
-  <div class="subribbon-vertical">
-    <button class="categoria active" data-cat="todos">Todos</button>
-    <button class="categoria" data-cat="acuarela">Acuarelas</button>
-    <button class="categoria" data-cat="oleo">Óleo</button>
-    <button class="categoria" data-cat="acrilico">Acrílico</button>
-    <button class="categoria" data-cat="linoleo">Linóleo</button>
-    <button class="categoria" data-cat="carboncillo">Carboncillo</button>
-    <button class="categoria" data-cat="telas">Telas</button>
-    <button class="categoria" data-cat="papel">Papel</button>
-  </div>
+<main class="papeleria">
+  <section class="intro">
+    <h2>Papelería de boda artesanal</h2>
 
-  <div class="galeria">
-    <!-- Título de categoría dinámico -->
-    <h2 id="titulo-categoria" style="margin-bottom:20px;">Todos</h2>
+    <p>
+      La papelería de boda es el hilo que une cada momento del gran día.
+      Pequeños detalles que hablan de vosotros, que acompañan y que hacen
+      que todo tenga coherencia, belleza y alma.
+    </p>
 
-    <div class="cuadro" data-cat="acuarela">
-      <img src="img/cuadro1.jpg" alt="Cuadro 1" data-descripcion="Acuarela 23x23 cm">
+    <p>
+      Trabajo con papel artesanal y materiales cuidadosamente seleccionados
+      para crear piezas únicas, hechas a mano, una a una. No hay límites:
+      puedo crear exactamente lo que imaginas, adaptándolo a vuestro estilo,
+      colores y esencia.
+    </p>
+
+    <p>
+      Desde lo más sencillo hasta lo más especial, cada elemento se diseña
+      en armonía con el resto de la papelería, cuidando los detalles y
+      respetando los tiempos del proceso artesanal.
+    </p>
+
+    <h3>¿Qué puedo crear para tu boda?</h3>
+
+    <p>
+      Descubre algunos de los elementos que podemos diseñar juntos:
+    </p>
+
+    <div class="desplegable">
+      <label for="papeleria-boda">Papelería disponible:</label>
+      <select id="papeleria-boda" name="papeleria-boda">
+        <option>Minutas</option>
+        <option>Meseros</option>
+        <option>Marcasitios</option>
+        <option>Seating plan</option>
+        <option>Números y señalética</option>
+        <option>Regalos personalizados</option>
+      </select>
     </div>
-    <div class="cuadro" data-cat="linoleo">
-      <img src="img/cuadro2.jpg" alt="Cuadro 2" data-descripcion="Linóleo y acuarela">
-    </div>
-    <div class="cuadro" data-cat="acrilico">
-      <img src="img/cuadro3.jpg" alt="Cuadro 3" data-descripcion="Acrílico sobre lienzo 100x73">
-    </div>
-    <div class="cuadro" data-cat="oleo,acrilico,carboncillo">
-      <img src="img/cuadro4.jpg" alt="Cuadro 4" data-descripcion="Acrílico, Óleo y Carboncillo sobre lienzo 73 x 100">
-    </div>
-  </div>
+
+    <p>
+      Si tienes algo diferente en mente, una idea especial o un detalle que
+      todavía no sabes cómo materializar, estaré encantada de ayudarte.
+      Juntos daremos forma a una papelería de boda coherente, delicada y
+      completamente personalizada.
+    </p>
+  </section>
 </main>
-
-<!-- Lightbox -->
-<div id="lightbox" class="lightbox">
-  <span class="cerrar">&times;</span>
-  <img class="lightbox-img" src="" alt="">
-  <p class="lightbox-desc"></p>
-</div>
 
 <footer>
   <p>© 2026 Belén Carretero</p>
 </footer>
-
-<script>
-  // ===== Lightbox =====
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImg = document.querySelector('.lightbox-img');
-  const lightboxDesc = document.querySelector('.lightbox-desc');
-  const cerrar = document.querySelector('.cerrar');
-
-  document.querySelectorAll('.galeria img').forEach(img => {
-    img.addEventListener('click', () => {
-      lightbox.style.display = 'flex';
-      lightboxImg.src = img.src;
-      lightboxDesc.textContent = img.dataset.descripcion;
-    });
-  });
-
-  cerrar.addEventListener('click', () => {
-    lightbox.style.display = 'none';
-  });
-
-  lightbox.addEventListener('click', e => {
-    if(e.target === lightbox) lightbox.style.display = 'none';
-  });
-
-  // ===== Filtro por categoría =====
-  const categorias = document.querySelectorAll('.subribbon-vertical .categoria');
-  const cuadros = document.querySelectorAll('.galeria .cuadro');
-  const tituloCategoria = document.getElementById('titulo-categoria');
-
-  categorias.forEach(btn => {
-    btn.addEventListener('click', () => {
-      // Quitar clase active de todos los botones
-      categorias.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      const cat = btn.dataset.cat;
-      cuadros.forEach(c => {
-        const cats = c.dataset.cat.split(',');
-        if(cat === 'todos' || cats.includes(cat)) {
-          c.style.display = 'block';
-        } else {
-          c.style.display = 'none';
-        }
-      });
-
-      // Actualizar título dinámico
-      tituloCategoria.textContent = btn.textContent;
-    });
-  });
-</script>
 
 </body>
 </html>
