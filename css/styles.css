@@ -71,7 +71,7 @@ main {
 /* ===== Introducción ===== */
 
 .intro {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   }
 .intro h2 {
   font-family: 'Playfair Display', serif;
@@ -243,6 +243,7 @@ footer {
     max-width: 100%;
   }
 }
+
 
 
 
