@@ -1,14 +1,11 @@
-/* ===== Importar fuentes elegantes ===== */
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Playfair+Display:wght@400;700&display=swap');
 
-/* ===== Reset básico ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ===== Body y tipografía ===== */
 body {
   font-family: 'Lora', serif;
   background-color: #fdfaf6;
@@ -16,25 +13,22 @@ body {
   line-height: 1.75;
 }
 
-/* ===== Header ===== */
+/* HEADER */
 header {
   background-color: #fff;
   padding: 30px 20px;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.06);
 }
 
 header h1 {
   font-family: 'Playfair Display', serif;
   font-size: 3rem;
-  color: #2c2c2c;
   margin-bottom: 15px;
-  letter-spacing: 1px;
 }
 
-/* ===== Navegación ===== */
+/* NAV */
 nav.ribbon {
   display: flex;
-  justify-content: flex-start;
   gap: 18px;
   flex-wrap: wrap;
 }
@@ -45,218 +39,101 @@ nav.ribbon a {
   border-radius: 8px 8px 0 0;
   background-color: #f6f2ec;
   color: #4a4a4a;
-  font-weight: 500;
-  transition: all 0.3s;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
-}
-
-nav.ribbon a:hover {
-  background-color: #e7dfd2;
-  color: #222;
 }
 
 nav.ribbon a.active {
   background-color: #d6c8b6;
-  color: #222;
-  font-weight: 600;
 }
 
-/* ===== Main ===== */
+/* MAIN */
 main {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto;
   padding: 50px 20px;
 }
 
-/* ===== Introducción ===== */
-
-.intro {
-  margin-bottom: 20px;
-  }
 .intro h2 {
   font-family: 'Playfair Display', serif;
   font-size: 2.6rem;
-  color: #5b4d4b;
-  margin-bottom: 10px;
   border-left: 4px solid #b59b82;
   padding-left: 12px;
 }
 
 .intro p {
-  font-size: 1.18rem;
-  color: #555;
-  font-style: italic;
   max-width: 720px;
+  font-style: italic;
   margin-top: 10px;
 }
-/* ===== Proceso ===== */
-.proceso h3 {
-  margin-top: 20px; /* Ajusta el valor según lo que necesites */
-}
-/* ===== Papelería  ===== */
+
+/* PAPELERÍA */
 .papeleria-page {
   display: flex;
-  justify-content: flex-start; /* Alinea los elementos en una fila */
-  gap: 30px; /* Espacio entre el submenú y el texto descriptivo */
-  align-items: flex-start; /* Alineación vertical a la parte superior */
+  gap: 30px;
   margin-top: 40px;
-   width: 100%;
+  align-items: flex-start;
 }
-.papeleria h3 {
-  margin-top: 20px; /* Ajusta el valor según lo que necesites */
-}
+
 .subribbon-vertical {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  width: 220px; /* Ancho fijo para el submenú */
+  width: 220px;
   background-color: #f6f2ec;
   padding: 20px;
   border-radius: 10px;
   position: sticky;
   top: 30px;
-  flex-shrink: 0;
 }
 
-.subribbon-vertical .categoria {
-  padding: 15px 20px;
-  background-color: #f6f2ec;
+.categoria {
+  display: block;
+  width: 100%;
+  padding: 14px 18px;
   border: none;
-  border-radius: 12px;
-  cursor: pointer;
+  background: none;
   font-weight: 600;
-  color: #4a4a4a;
-  font-size: 1.1rem;
-  transition: all 0.3s;
+  cursor: pointer;
+  border-radius: 10px;
   text-align: left;
 }
 
-.subribbon-vertical .categoria:hover {
+.categoria:hover {
   background-color: #e7dfd2;
-  color: #222;
 }
 
-.subribbon-vertical .categoria.active {
+.categoria.active {
   background-color: #d6c8b6;
-  color: #222;
 }
 
-/* Descripción que aparece al lado del menú lateral */
+/* DESCRIPCIÓN */
 .descripcion {
-  flex-grow: 1; /* Permite que la descripción ocupe el espacio restante */
-  font-size: 1.15rem;
-  color: #555;
-  padding: 15px;
-  background-color: transparent; /* Fondo transparente */
-  border: none;
-  margin-top: 0; /* Aseguramos que no haya margen superior */
-  width: 100%;
-  max-width: calc(100% - 240px); /* Esto asegura que la descripción no se desborde */
-  box-sizing: border-box;
+  flex-grow: 1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.descripcion.mostrar {
+  opacity: 1;
 }
 
 .descripcion p {
-  font-size: 1.1rem;
-  font-style: italic; /* Mantener el estilo en cursiva como antes */
-  color: #555; /* Restauramos el color */
+  font-style: italic;
+  font-size: 1.15rem;
 }
 
-/* ===== Footer ===== */
+/* FOOTER */
 footer {
   text-align: center;
   padding: 40px;
-  font-size: 0.95rem;
-  color: #888;
   margin-top: 60px;
-  border-top: 1px solid #eee;
   background-color: #fff;
-  width: 100%;
 }
 
-/* Estilo para el formulario de contacto */
-.formulario-contacto {
-  display: flex;
-  flex-direction: column;  /* Alinea los campos en columna */
-  gap: 20px;               /* Espacio entre los campos */
-  max-width: 600px;        /* Máximo ancho para el formulario */
-  padding: 20px;
-  background-color: #f6f2ec; /* Fondo suave */
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
-  margin-left: 0;           /* Elimina el centrado y alinea a la izquierda */
-  margin-right: auto;       /* Permite que se quede pegado a la izquierda */
-}
-
-/* Estilo para cada campo de entrada (input y textarea) */
-.formulario-contacto input,
-.formulario-contacto textarea {
-  padding: 12px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background-color: #fff;
-  color: #333;
-  width: 100%;             /* Asegura que los campos ocupen todo el ancho disponible */
-  box-sizing: border-box;  /* Considera el padding y el borde dentro del ancho */
-  transition: border-color 0.3s ease;
-}
-
-/* Cambio de color al enfocar los campos de entrada */
-.formulario-contacto input:focus,
-.formulario-contacto textarea:focus {
-  border-color: #d6c8b6;    /* Color cálido al enfocar */
-  outline: none;            /* Quita el contorno por defecto */
-}
-
-/* Estilo para el botón de envío */
-.formulario-contacto button {
-  padding: 12px 20px;
-  font-size: 1.1rem;
-  border: none;
-  background-color: #d6c8b6;
-  color: white;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-/* Efecto hover en el botón */
-.formulario-contacto button:hover {
-  background-color: #b59b82;  /* Color más oscuro al pasar el ratón */
-}
-
-
-/* Ajustes para pantallas pequeñas */
+/* MÓVIL */
 @media (max-width: 768px) {
   .papeleria-page {
-    flex-direction: column; /* En pantallas pequeñas, apilar los elementos */
+    flex-direction: column;
   }
 
   .subribbon-vertical {
-    width: 100%; /* El menú ocupará todo el ancho en pantallas pequeñas */
-    max-width: 100%;
-  }
-
-  .descripcion {
-    margin-top: 20px; /* Aseguramos que la descripción no se quede pegada al menú */
     width: 100%;
-    max-width: 100%;
+    position: static;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
