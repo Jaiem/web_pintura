@@ -74,7 +74,6 @@
   <p>© 2026 Un Prado Blanco</p>
 </footer>
 
-
 <script>
   function mostrarDescripcion(item) {
     var descripcion = '';
@@ -98,16 +97,29 @@
       case 'regalos':
         descripcion = '<p>Regalos personalizados hechos a mano, perfectos para dejar una huella inolvidable en tus invitados. Un detalle único que reflejará el amor de tu boda.</p>';
         break;
-      default:
-        descripcion = '<p>Selecciona un elemento para ver la descripción.</p>';
     }
 
-    // Mostrar la descripción en el div correspondiente
-    document.getElementById('descripcion').innerHTML = descripcion;
+    // Mostrar descripción
+    const contenedor = document.getElementById('descripcion');
+    contenedor.innerHTML = descripcion;
+
+    // Quitar active de todos los botones
+    document.querySelectorAll('.categoria').forEach(btn => {
+      btn.classList.remove('active');
+    });
+
+    // Marcar botón activo
+    event.target.classList.add('active');
+
+    // Scroll suave en móvil
+    if (window.innerWidth <= 768) {
+      contenedor.scrollIntoView({ behavior: 'smooth' });
+    }
   }
 </script>
 
 </html>
+
 
 
 
