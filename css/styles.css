@@ -23,8 +23,6 @@ header {
   background-color: #fff;
   padding: 30px 20px;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
-  margin-left: 20px; /* Margen pequeño a la izquierda */
-  margin-right: 20px; /* Margen pequeño a la derecha */
 }
 
 header h1 {
@@ -386,3 +384,4 @@ footer {
   margin: 20px auto;
   line-height: 1.9;
 }
+
