@@ -340,7 +340,7 @@ footer {
 .header-logo {
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* Logo a la izquierda, texto y nav después */
+  justify-content: flex-start; /* Logo y texto alineados a la izquierda */
   gap: 20px; /* espacio entre logo y título */
   padding: 20px 30px; 
   background-color: #fff; /* mantiene el header blanco */
@@ -367,8 +367,34 @@ footer {
   margin: 0;
 }
 
-.header-logo nav {
-  margin-left: auto; /* empuja la navegación al final del header */
+nav.ribbon {
+  display: flex;
+  justify-content: flex-start;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-left: 20px; /* Ajusta el espacio entre el título y la navegación */
+}
+
+nav.ribbon a {
+  text-decoration: none;
+  padding: 12px 22px;
+  border-radius: 8px 8px 0 0;
+  background-color: #f6f2ec;
+  color: #4a4a4a;
+  font-weight: 500;
+  transition: all 0.3s;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+nav.ribbon a:hover {
+  background-color: #e7dfd2;
+  color: #222;
+}
+
+nav.ribbon a.active {
+  background-color: #d6c8b6;
+  color: #222;
+  font-weight: 600;
 }
 
 /* RESPONSIVE */
@@ -390,6 +416,3 @@ footer {
     height: 60px;
   }
 }
-
-
-
