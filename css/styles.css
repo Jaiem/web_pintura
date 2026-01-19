@@ -336,40 +336,34 @@ footer {
 
 /* ===== HEADER CON LOGO Y TÍTULO ===== */
 .header-logo {
-  display: flex;
-  flex-direction: column;  /* Logo y título apilados verticalmente */
-  align-items: center;  /* Centra los elementos horizontalmente */
-  justify-content: center; /* Centra los elementos en el header */
-  gap: 10px;  /* Espacio entre el logo, el título y las pestañas */
-  padding: 30px 20px;
-  background-color: #fff;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
-  position: relative;
-  width: 100%; /* Asegura que el header ocupe todo el ancho */
+  display: flex;  /* Usamos flexbox para alinear los elementos */
+  justify-content: flex-start;  /* Alinea los elementos a la izquierda */
+  align-items: center;  /* Centra verticalmente el logo y el título */
+  padding: 30px 20px;  /* Espaciado dentro del header */
+  background-color: #fff;  /* Fondo blanco */
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);  /* Sombra suave */
 }
 
-/* Contenedor para la imagen del logo */
 .logo-container {
-  flex-shrink: 0; /* Evita que el logo se reduzca en flexbox */
+  flex-shrink: 0; /* Evita que el logo se reduzca de tamaño en el contenedor */
 }
 
 .logo-container img {
-  width: 80px; /* Tamaño del logo */
+  width: 80px;  /* Tamaño del logo */
   height: 80px;
-  border-radius: 50%; /* Logo redondo */
-  object-fit: cover; /* Recorta la imagen manteniendo proporciones */
-  border: 2px solid #b59b82; /* Borde decorativo opcional */
+  border-radius: 50%;  /* Redondea el logo */
+  object-fit: cover;  /* Recorta la imagen para mantener la proporción */
+  border: 2px solid #b59b82;  /* Borde decorativo del logo */
 }
 
-/* Título */
 header h1 {
   font-family: 'Playfair Display', serif;
   font-size: 3rem;
   color: #2c2c2c;
-  margin: 0;
-  letter-spacing: 1px;  /* Ajuste de espaciado para el título */
+  margin: 0;  /* Elimina el margen por defecto del h1 */
+  letter-spacing: 1px;  /* Espaciado entre las letras */
+  margin-left: 20px;  /* Espacio entre el logo y el título */
 }
-
 /* ===== Navegación debajo del logo y título ===== */
 nav.ribbon {
   display: flex;
@@ -421,3 +415,4 @@ nav.ribbon a.active {
     margin-top: 10px;
   }
 }
+
