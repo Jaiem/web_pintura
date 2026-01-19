@@ -244,20 +244,64 @@ footer {
   }
 }
 /* ===============================
-   PROCESO ARTESANAL
+   PROCESO ARTESANAL – HERO
 ================================ */
 
-/* HERO */
 .hero-proceso {
+  position: relative;
   width: 100%;
-  height: 65vh;
+  height: 75vh;
   background-image: url("../img/procesoArtesanal/1 HORIZONTAL.jpg");
   background-size: cover;
   background-position: center;
   margin-bottom: 5rem;
 }
 
-/* GALERÍA GRAN FORMATO */
+/* Overlay suave */
+.hero-proceso::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Contenido del hero */
+.hero-contenido {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  color: #2e2e2e;
+}
+
+.hero-contenido h2 {
+  font-size: 3rem;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+
+.hero-contenido p {
+  font-size: 1.1rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* Subtítulo editorial */
+.subtitulo-proceso {
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  margin-top: 0;
+}
+
+/* ===============================
+   GALERÍAS DE IMÁGENES
+================================ */
+
 .galeria-proceso {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -267,7 +311,7 @@ footer {
 
 .galeria-proceso img {
   width: 100%;
-  height: 420px;        /* MÁS GRANDES */
+  height: 420px;
   object-fit: cover;
   border-radius: 2px;
   transition: transform 0.4s ease;
@@ -276,10 +320,6 @@ footer {
 .galeria-proceso img:hover {
   transform: scale(1.04);
 }
-
-
-
-
 
 
 
