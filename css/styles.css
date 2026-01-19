@@ -332,10 +332,34 @@ footer {
   margin: 20px auto;   /* CLAVE: centra el bloque */
   line-height: 1.9;
 }
+/* ===============================
+   HEADER CON LOGO DE FONDO
+================================ */
 
+.header-logo {
+  position: relative;
+  background-image: url("../img/logo.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 80px 20px 40px;
+}
 
+/* Overlay suave para legibilidad */
+.header-logo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.6);
+}
 
+/* Asegurar que el contenido quede por encima */
+.header-logo h1,
+.header-logo nav {
+  position: relative;
+}
 
-
-
+/* Ajuste del título sobre imagen */
+.header-logo h1 {
+  text-align: center;
+}
 
