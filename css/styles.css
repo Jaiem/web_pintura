@@ -1,3 +1,4 @@
+
 /* ===== Importar fuentes elegantes ===== */
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Playfair+Display:wght@400;700&display=swap');
 
@@ -333,46 +334,51 @@ footer {
   line-height: 1.9;
 }
 
-/* ===== HEADER CON LOGO Y TÍTULO A LA IZQUIERDA ===== */
-header {
+/* ===== HEADER CON LOGO Y TÍTULO A LA DERECHA ===== */
+.header-logo {
   display: flex;
-  flex-direction: column;  /* Establece la dirección en columna */
-  align-items: center;     /* Centra los elementos horizontalmente */
-  justify-content: center;
+  flex-direction: row;  /* Logo y título alineados horizontalmente */
+  align-items: center;  /* Centra verticalmente el logo y el título */
+  justify-content: flex-start; /* Alinea los elementos a la izquierda */
+  gap: 20px;  /* Espacio entre el logo y el título */
   padding: 30px 20px;
   background-color: #fff;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+  position: relative;
 }
 
-header h1 {
+.logo-container {
+  flex-shrink: 0; /* Evita que el logo se reduzca en flexbox */
+}
+
+.logo-container img {
+  width: 80px;           /* Tamaño del logo */
+  height: 80px;
+  border-radius: 50%;    /* Logo redondo */
+  object-fit: cover;     /* Recorta la imagen manteniendo proporciones */
+  border: 2px solid #b59b82; /* Borde decorativo opcional */
+}
+
+.header-logo h1 {
   font-family: 'Playfair Display', serif;
   font-size: 3rem;
   color: #2c2c2c;
-  margin-bottom: 15px;
-  letter-spacing: 1px;
+  margin: 0;
+  letter-spacing: 1px;  /* Ajuste de espaciado para el título */
 }
 
-/* ===== Alineación del logo y título en fila ===== */
-.header-logo {
-  display: flex;
-  flex-direction: row;  /* Alineamos el logo y el título en fila */
-  align-items: center;  /* Centra verticalmente el logo y el título */
-  justify-content: center;  /* Centra el logo y el título */
-  gap: 20px;
-}
-
-/* ===== Navegación (Tabs) debajo del logo y título ===== */
+/* ===== Contenedor para las pestañas de navegación debajo del logo y título ===== */
 .nav-container {
-  width: 100%;
-  margin-top: 20px;  /* Espacio entre el logo/título y las tabs */
+  width: 100%;  /* Asegura que el contenedor ocupe todo el ancho */
+  margin-top: 15px;  /* Espacio entre el logo y el menú de navegación */
   display: flex;
-  justify-content: center;  /* Centra las pestañas */
+  justify-content: center;  /* Centra las pestañas debajo del logo */
 }
 
-/* ===== Navegación de las tabs ===== */
+/* ===== Navegación debajo del logo y título ===== */
 nav.ribbon {
   display: flex;
-  justify-content: center;  /* Centra las tabs dentro de la barra */
+  justify-content: center; /* Centra las pestañas dentro del nav */
   gap: 18px;
   flex-wrap: wrap;
 }
@@ -399,20 +405,27 @@ nav.ribbon a.active {
   font-weight: 600;
 }
 
-/* Responsividad para pantallas pequeñas */
+/* RESPONSIVE: En pantallas pequeñas, los elementos del header se apilan */
 @media (max-width: 768px) {
   .header-logo {
-    flex-direction: column; /* En pantallas pequeñas, apilar logo y título */
-    align-items: center;     /* Centra los elementos */
-    text-align: center;      /* Centra el texto */
+    flex-direction: column; /* En pantallas pequeñas, el logo y el título se apilan */
+    align-items: center;  /* Centra los elementos */
+    text-align: center;   /* Alinea el texto al centro */
     gap: 10px;
   }
 
+  .logo-container img {
+    width: 60px;
+    height: 60px;
+  }
+
   .nav-container {
-    margin-top: 15px;
+    width: 100%;
+    margin-top: 10px;
   }
 
   nav.ribbon {
-    justify-content: center;
+    justify-content: center; /* Centra la barra de navegación */
+    margin-top: 10px;
   }
 }
