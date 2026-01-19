@@ -254,7 +254,6 @@ footer {
   background-image: url("../img/procesoArtesanal/1 HORIZONTAL.jpg");
   background-size: cover;
   background-position: center;
-  margin-bottom: 5rem;
 }
 
 /* Overlay suave */
@@ -320,6 +319,7 @@ footer {
 .galeria-proceso img:hover {
   transform: scale(1.04);
 }
+
 
 
 
