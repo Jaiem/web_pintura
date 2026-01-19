@@ -1,4 +1,3 @@
-
 /* ===== Importar fuentes elegantes ===== */
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Playfair+Display:wght@400;700&display=swap');
 
@@ -15,6 +14,8 @@ body {
   background-color: #fdfaf6;
   color: #333;
   line-height: 1.75;
+  margin: 0; /* Eliminar márgenes */
+  padding: 0; /* Eliminar relleno */
 }
 
 /* ===== Header ===== */
@@ -28,7 +29,7 @@ header h1 {
   font-family: 'Playfair Display', serif;
   font-size: 3rem;
   color: #2c2c2c;
-  margin-bottom: 15px;
+  margin: 0 0 0 20px; /* Eliminar margen superior y agregar espacio entre el logo y el título */
   letter-spacing: 1px;
 }
 
@@ -64,16 +65,16 @@ nav.ribbon a.active {
 
 /* ===== Main ===== */
 main {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 50px 20px;
+  max-width: 100%; /* Usar el 100% del ancho disponible */
+  margin: 0; /* Eliminar márgenes */
+  padding: 20px 15px; /* Ajustar relleno */
 }
 
 /* ===== Introducción ===== */
-
 .intro {
-  margin-bottom: 20px;
-  }
+  margin: 0; /* Reducir margen */
+}
+
 .intro h2 {
   font-family: 'Playfair Display', serif;
   font-size: 2.6rem;
@@ -90,31 +91,35 @@ main {
   max-width: 720px;
   margin-top: 10px;
 }
+
 /* ===== Proceso ===== */
 .proceso h3 {
-  margin: 60px auto 30px auto;
+  margin: 30px 0 10px 0; /* Reducir margen superior e inferior */
   text-align: center;
   max-width: 720px;
   font-weight: 300;
   letter-spacing: 0.08em;
 }
-/* ===== Papelería  ===== */
+
+/* ===== Papelería ===== */
 .papeleria-page {
   display: flex;
-  justify-content: flex-start; /* Alinea los elementos en una fila */
-  gap: 30px; /* Espacio entre el submenú y el texto descriptivo */
-  align-items: flex-start; /* Alineación vertical a la parte superior */
-  margin-top: 40px;
-   width: 100%;
+  justify-content: flex-start;
+  gap: 30px;
+  align-items: flex-start;
+  margin: 0; /* Eliminar márgenes */
+  padding: 0; /* Eliminar relleno */
 }
+
 .papeleria h3 {
-  margin-top: 20px; /* Ajusta el valor según lo que necesites */
+  margin-top: 20px;
 }
+
 .subribbon-vertical {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  width: 220px; /* Ancho fijo para el submenú */
+  width: 220px;
   background-color: #f6f2ec;
   padding: 20px;
   border-radius: 10px;
@@ -148,31 +153,31 @@ main {
 
 /* Descripción que aparece al lado del menú lateral */
 .descripcion {
-  flex-grow: 1; /* Permite que la descripción ocupe el espacio restante */
+  flex-grow: 1;
   font-size: 1.15rem;
   color: #555;
-  padding: 15px;
-  background-color: transparent; /* Fondo transparente */
+  padding: 0 15px; /* Ajustar relleno solo a los lados */
+  background-color: transparent;
   border: none;
-  margin-top: 0; /* Aseguramos que no haya margen superior */
+  margin-top: 0; /* Eliminar margen superior */
   width: 100%;
-  max-width: calc(100% - 240px); /* Esto asegura que la descripción no se desborde */
+  max-width: calc(100% - 240px);
   box-sizing: border-box;
 }
 
 .descripcion p {
   font-size: 1.1rem;
-  font-style: italic; /* Mantener el estilo en cursiva como antes */
-  color: #555; /* Restauramos el color */
+  font-style: italic;
+  color: #555;
 }
 
 /* ===== Footer ===== */
 footer {
   text-align: center;
-  padding: 40px;
+  padding: 40px 15px; /* Reducir relleno */
   font-size: 0.95rem;
   color: #888;
-  margin-top: 60px;
+  margin-top: 40px;
   border-top: 1px solid #eee;
   background-color: #fff;
   width: 100%;
@@ -181,15 +186,15 @@ footer {
 /* Estilo para el formulario de contacto */
 .formulario-contacto {
   display: flex;
-  flex-direction: column;  /* Alinea los campos en columna */
-  gap: 20px;               /* Espacio entre los campos */
-  max-width: 600px;        /* Máximo ancho para el formulario */
+  flex-direction: column;
+  gap: 20px;
+  max-width: 600px;
   padding: 20px;
-  background-color: #f6f2ec; /* Fondo suave */
+  background-color: #f6f2ec;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
-  margin-left: 0;           /* Elimina el centrado y alinea a la izquierda */
-  margin-right: auto;       /* Permite que se quede pegado a la izquierda */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-left: 0;
+  margin-right: auto;
 }
 
 /* Estilo para cada campo de entrada (input y textarea) */
@@ -201,16 +206,16 @@ footer {
   border-radius: 8px;
   background-color: #fff;
   color: #333;
-  width: 100%;             /* Asegura que los campos ocupen todo el ancho disponible */
-  box-sizing: border-box;  /* Considera el padding y el borde dentro del ancho */
+  width: 100%;
+  box-sizing: border-box;
   transition: border-color 0.3s ease;
 }
 
 /* Cambio de color al enfocar los campos de entrada */
 .formulario-contacto input:focus,
 .formulario-contacto textarea:focus {
-  border-color: #d6c8b6;    /* Color cálido al enfocar */
-  outline: none;            /* Quita el contorno por defecto */
+  border-color: #d6c8b6;
+  outline: none;
 }
 
 /* Estilo para el botón de envío */
@@ -227,31 +232,67 @@ footer {
 
 /* Efecto hover en el botón */
 .formulario-contacto button:hover {
-  background-color: #b59b82;  /* Color más oscuro al pasar el ratón */
+  background-color: #b59b82;
 }
-
 
 /* Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
   .papeleria-page {
-    flex-direction: column; /* En pantallas pequeñas, apilar los elementos */
+    flex-direction: column;
+    margin: 0;
   }
 
   .subribbon-vertical {
-    width: 100%; /* El menú ocupará todo el ancho en pantallas pequeñas */
+    width: 100%;
     max-width: 100%;
+    padding: 10px;
   }
 
   .descripcion {
-    margin-top: 20px; /* Aseguramos que la descripción no se quede pegada al menú */
+    margin-top: 10px;
     width: 100%;
     max-width: 100%;
   }
-}
-/* ===============================
-   PROCESO ARTESANAL – HERO
-================================ */
 
+  body {
+    padding: 0;
+  }
+
+  .header-logo {
+    padding: 20px 15px;
+  }
+
+  .hero-proceso {
+    height: 50vh;
+  }
+
+  .hero-contenido h2 {
+    font-size: 2.5rem;
+  }
+
+  .hero-contenido p {
+    font-size: 1rem;
+  }
+
+  .galeria-proceso {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .logo-container img {
+    width: 60px;
+    height: 60px;
+  }
+
+  nav.ribbon {
+    justify-content: center;
+    margin-top: 10px;
+  }
+}
+
+/* =============================== 
+   PROCESO ARTESANAL – HERO 
+================================ */
 .hero-proceso {
   position: relative;
   width: 100%;
@@ -261,7 +302,6 @@ footer {
   background-position: center;
 }
 
-/* Overlay suave */
 .hero-proceso::before {
   content: "";
   position: absolute;
@@ -269,7 +309,6 @@ footer {
   background: rgba(255, 255, 255, 0.25);
 }
 
-/* Contenido del hero */
 .hero-contenido {
   position: relative;
   height: 100%;
@@ -295,17 +334,9 @@ footer {
   text-transform: uppercase;
 }
 
-/* Subtítulo editorial */
-.subtitulo-proceso {
-  font-weight: 300;
-  letter-spacing: 0.1em;
-  margin-top: 0;
-}
-
-/* ===============================
+/* =============================== 
    GALERÍAS DE IMÁGENES
 ================================ */
-
 .galeria-proceso {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -330,94 +361,6 @@ footer {
   text-align: justify;
   text-justify: inter-word;
   max-width: 720px;
-  margin: 20px auto;   /* CLAVE: centra el bloque */
+  margin: 20px auto;
   line-height: 1.9;
 }
-
-/* ===== HEADER CON LOGO Y TÍTULO ===== */
-.header-logo {
-  padding: 30px 20px;  /* Espaciado dentro del header */
-  background-color: #fff;  /* Fondo blanco */
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);  /* Sombra suave */
-}
-
-/* Contenedor para logo y título */
-.logo-title-container {
-  display: flex;  /* Usamos flexbox para alinear el logo y el título en una fila */
-  flex-direction: row;  /* Alinea el logo y el título horizontalmente */
-  align-items: center;  /* Centra verticalmente el logo y el título */
-}
-
-.logo-container {
-  flex-shrink: 0; /* Evita que el logo se reduzca de tamaño */
-}
-
-.logo-container img {
-  width: 80px;  /* Tamaño del logo */
-  height: 80px;
-  border-radius: 50%;  /* Redondea el logo */
-  object-fit: cover;  /* Recorta la imagen para mantener la proporción */
-  border: 2px solid #b59b82;  /* Borde decorativo del logo */
-}
-
-header h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 3rem;
-  color: #2c2c2c;
-  margin: 0 0 0 20px;  /* Elimina el margen superior y agrega espacio entre el logo y el título */
-  letter-spacing: 1px;  /* Espaciado entre las letras */
-}
-
-/* ===== Navegación debajo del título ===== */
-nav.ribbon {
-  display: flex;
-  justify-content: flex-start;  /* Alinea las pestañas a la izquierda */
-  gap: 18px;  /* Espacio entre las pestañas */
-  margin-top: 15px;  /* Espacio entre el título y las pestañas */
-}
-
-nav.ribbon a {
-  text-decoration: none;
-  padding: 12px 22px;
-  border-radius: 8px 8px 0 0;
-  background-color: #f6f2ec;
-  color: #4a4a4a;
-  font-weight: 500;
-  transition: all 0.3s;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
-}
-
-nav.ribbon a:hover {
-  background-color: #e7dfd2;
-  color: #222;
-}
-
-nav.ribbon a.active {
-  background-color: #d6c8b6;
-  color: #222;
-  font-weight: 600;
-}
-/* RESPONSIVE: En pantallas pequeñas, los elementos del header se apilan */
-@media (max-width: 768px) {
-  .header-logo {
-    flex-direction: column; /* En pantallas pequeñas, el logo, título y pestañas se apilan */
-    align-items: center;  /* Centra los elementos */
-    text-align: center;   /* Alinea el texto al centro */
-    gap: 10px;
-  }
-
-  .logo-container img {
-    width: 60px;
-    height: 60px;
-  }
-
-  nav.ribbon {
-    justify-content: center; /* Centra las pestañas en pantallas pequeñas */
-    margin-top: 10px;
-  }
-}
-
-
-
-
-
