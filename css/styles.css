@@ -336,9 +336,9 @@ footer {
 
 /* ===== HEADER CON LOGO Y TÍTULO ===== */
 .header-logo {
-  display: flex;  /* Usamos flexbox para alinear el logo y el título */
-  flex-direction: column;  /* Alinea los elementos (logo y título) en una columna */
-  align-items: flex-start;  /* Alinea los elementos a la izquierda */
+  display: flex;  /* Usamos flexbox para alinear logo y título en una fila */
+  flex-direction: row;  /* Alinea los elementos horizontalmente */
+  align-items: center;  /* Centra verticalmente el logo y el título */
   padding: 30px 20px;  /* Espaciado dentro del header */
   background-color: #fff;  /* Fondo blanco */
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);  /* Sombra suave */
@@ -360,9 +360,8 @@ header h1 {
   font-family: 'Playfair Display', serif;
   font-size: 3rem;
   color: #2c2c2c;
-  margin: 0;  /* Elimina el margen por defecto del h1 */
+  margin: 0 0 0 20px;  /* Elimina el margen superior y agrega espacio entre el logo y el título */
   letter-spacing: 1px;  /* Espaciado entre las letras */
-  margin-top: 10px; /* Añade un poco de espacio después del logo */
 }
 
 /* ===== Navegación debajo del título ===== */
@@ -413,5 +412,6 @@ nav.ribbon a.active {
     margin-top: 10px;
   }
 }
+
 
 
