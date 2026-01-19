@@ -85,7 +85,7 @@ nav.ribbon a.active {
 
 /* ===== Main ===== */
 main {
-  max-width: 1200px; /* Mantener el ancho máximo para evitar que el contenido se estire demasiado */
+  max-width: 100%; /* Usar el 100% del ancho disponible */
   margin: 0 auto; /* Centrado con márgenes automáticos */
   padding: 20px;
 }
@@ -128,7 +128,8 @@ main {
   justify-content: flex-start;
   gap: 30px;
   align-items: flex-start;
-  margin-top: 40px;
+  margin: 0; /* Eliminar márgenes */
+  padding: 0; /* Eliminar relleno */
 }
 
 .papeleria h3 {
@@ -384,4 +385,5 @@ footer {
   margin: 20px auto;
   line-height: 1.9;
 }
+
 
