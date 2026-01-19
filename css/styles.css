@@ -23,22 +23,44 @@ header {
   background-color: #fff;
   padding: 30px 20px;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+  margin-left: 20px; /* Margen pequeño a la izquierda */
+  margin-right: 20px; /* Margen pequeño a la derecha */
 }
 
 header h1 {
   font-family: 'Playfair Display', serif;
   font-size: 3rem;
   color: #2c2c2c;
-  margin: 0 0 0 20px; /* Eliminar margen superior y agregar espacio entre el logo y el título */
+  margin: 0 0 0 20px;
   letter-spacing: 1px;
 }
 
-/* ===== Navegación ===== */
+/* ===== Contenedor logo y título ===== */
+.logo-title-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px; /* Espacio entre el logo y el título */
+}
+
+.logo-container {
+  flex-shrink: 0;
+}
+
+.logo-container img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #b59b82;
+}
+
 nav.ribbon {
   display: flex;
   justify-content: flex-start;
   gap: 18px;
   flex-wrap: wrap;
+  margin-top: 15px;
 }
 
 nav.ribbon a {
@@ -65,9 +87,9 @@ nav.ribbon a.active {
 
 /* ===== Main ===== */
 main {
-  max-width: 100%; /* Usar el 100% del ancho disponible */
-  margin: 0; /* Eliminar márgenes */
-  padding: 20px 15px; /* Ajustar relleno */
+  max-width: 1200px; /* Mantener el ancho máximo para evitar que el contenido se estire demasiado */
+  margin: 0 auto; /* Centrado con márgenes automáticos */
+  padding: 20px;
 }
 
 /* ===== Introducción ===== */
@@ -88,13 +110,14 @@ main {
   font-size: 1.18rem;
   color: #555;
   font-style: italic;
-  max-width: 720px;
+  max-width: 100%; /* Aprovechar todo el espacio disponible */
   margin-top: 10px;
+  line-height: 1.8; /* Aumentar altura de línea para mejor legibilidad */
 }
 
 /* ===== Proceso ===== */
 .proceso h3 {
-  margin: 30px 0 10px 0; /* Reducir margen superior e inferior */
+  margin: 30px 0 10px 0;
   text-align: center;
   max-width: 720px;
   font-weight: 300;
@@ -107,8 +130,7 @@ main {
   justify-content: flex-start;
   gap: 30px;
   align-items: flex-start;
-  margin: 0; /* Eliminar márgenes */
-  padding: 0; /* Eliminar relleno */
+  margin-top: 40px;
 }
 
 .papeleria h3 {
@@ -156,10 +178,10 @@ main {
   flex-grow: 1;
   font-size: 1.15rem;
   color: #555;
-  padding: 0 15px; /* Ajustar relleno solo a los lados */
+  padding: 0 15px;
   background-color: transparent;
   border: none;
-  margin-top: 0; /* Eliminar margen superior */
+  margin-top: 0;
   width: 100%;
   max-width: calc(100% - 240px);
   box-sizing: border-box;
@@ -174,7 +196,7 @@ main {
 /* ===== Footer ===== */
 footer {
   text-align: center;
-  padding: 40px 15px; /* Reducir relleno */
+  padding: 40px 15px;
   font-size: 0.95rem;
   color: #888;
   margin-top: 40px;
@@ -360,7 +382,7 @@ footer {
 .proceso .intro p {
   text-align: justify;
   text-justify: inter-word;
-  max-width: 720px;
+  max-width: 100%;
   margin: 20px auto;
   line-height: 1.9;
 }
