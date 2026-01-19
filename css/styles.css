@@ -94,6 +94,8 @@ main {
   margin-top: 20px; /* Ajusta el valor según lo que necesites */
   text-align: justify;
   text-justify: inter-word;
+  max-width: 720px;
+  margin: 20px auto;
 }
 /* ===== Papelería  ===== */
 .papeleria-page {
@@ -330,6 +332,7 @@ footer {
   margin: 20px auto;   /* CLAVE: centra el bloque */
   line-height: 1.9;
 }
+
 
 
 
