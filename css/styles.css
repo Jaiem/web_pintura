@@ -345,9 +345,23 @@ footer {
   background-color: #fff;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
   position: relative;
+  width: 100%; /* Asegura que el header ocupe todo el ancho */
 }
 
-/* Contenedor para las pestañas de navegación debajo del logo y título */
+/* Contenedor para la imagen del logo */
+.logo-container {
+  flex-shrink: 0; /* Evita que el logo se reduzca en flexbox */
+}
+
+.logo-container img {
+  width: 80px; /* Tamaño del logo */
+  height: 80px;
+  border-radius: 50%; /* Logo redondo */
+  object-fit: cover; /* Recorta la imagen manteniendo proporciones */
+  border: 2px solid #b59b82; /* Borde decorativo opcional */
+}
+
+/* ===== Contenedor para las pestañas de navegación debajo del logo y título ===== */
 .nav-container {
   width: 100%;  /* Asegura que el contenedor ocupe todo el ancho */
   margin-top: 15px;  /* Espacio entre el logo y el menú de navegación */
@@ -409,4 +423,3 @@ nav.ribbon a.active {
     margin-top: 10px;
   }
 }
-
