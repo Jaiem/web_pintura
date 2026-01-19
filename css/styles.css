@@ -333,12 +333,13 @@ footer {
   line-height: 1.9;
 }
 
-/* ===== HEADER CON LOGO CIRCULAR ===== */
+/* ===== HEADER CON LOGO Y TÍTULO A LA DERECHA ===== */
 .header-logo {
   display: flex;
-  flex-direction: column; /* Cambiado de 'row' a 'column' para apilar los elementos */
-  align-items: center;    /* Centra el contenido */
-  justify-content: center; /* Centra verticalmente */
+  flex-direction: row;  /* Coloca el logo y el título en una fila */
+  align-items: center;  /* Centra verticalmente el logo y el título */
+  justify-content: flex-start; /* Alinea los elementos a la izquierda */
+  gap: 20px;  /* Espacio entre el logo y el título */
   padding: 30px 20px;
   background-color: #fff;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
@@ -346,15 +347,15 @@ footer {
 }
 
 .logo-container {
-  flex-shrink: 0; /* evitar que se reduzca en flexbox */
+  flex-shrink: 0; /* Evita que el logo se reduzca en flexbox */
 }
 
 .logo-container img {
-  width: 80px;           /* tamaño del círculo */
+  width: 80px;           /* Tamaño del logo */
   height: 80px;
-  border-radius: 50%;    /* círculo perfecto */
-  object-fit: cover;     /* recorta la imagen manteniendo proporciones */
-  border: 2px solid #b59b82; /* borde decorativo opcional */
+  border-radius: 50%;    /* Logo redondo */
+  object-fit: cover;     /* Recorta la imagen manteniendo proporciones */
+  border: 2px solid #b59b82; /* Borde decorativo opcional */
 }
 
 .header-logo h1 {
@@ -362,16 +363,16 @@ footer {
   font-size: 3rem;
   color: #2c2c2c;
   margin: 0;
-  margin-top: 10px; /* Añadir un pequeño margen arriba del título */
+  letter-spacing: 1px;  /* Ajuste de espaciado para el título */
 }
 
-/* ===== Navegación debajo del título ===== */
+/* ===== Navegación debajo del logo y título ===== */
 nav.ribbon {
   display: flex;
   justify-content: center; /* Centra la barra de navegación */
   gap: 18px;
   flex-wrap: wrap;
-  margin-top: 15px; /* Ajusta el espacio entre el título y la navegación */
+  margin-top: 15px;  /* Espacio entre el título y la barra de navegación */
 }
 
 nav.ribbon a {
@@ -396,12 +397,12 @@ nav.ribbon a.active {
   font-weight: 600;
 }
 
-/* RESPONSIVE */
+/* RESPONSIVE: En pantallas pequeñas, los elementos del header se apilan */
 @media (max-width: 768px) {
   .header-logo {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    flex-direction: column; /* En pantallas pequeñas, el logo y el título se apilan */
+    align-items: center;  /* Centra los elementos */
+    text-align: center;   /* Alinea el texto al centro */
     gap: 10px;
   }
 
@@ -411,6 +412,7 @@ nav.ribbon a.active {
   }
 
   nav.ribbon {
-    justify-content: center; /* Mantén centrado también en pantallas pequeñas */
+    justify-content: center; /* Centra la barra de navegación */
+    margin-top: 10px;
   }
 }
