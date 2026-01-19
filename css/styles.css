@@ -336,16 +336,16 @@ footer {
 
 /* ===== HEADER CON LOGO Y TÍTULO ===== */
 .header-logo {
-  display: flex;  /* Usamos flexbox para alinear los elementos */
-  justify-content: flex-start;  /* Alinea los elementos a la izquierda */
-  align-items: center;  /* Centra verticalmente el logo y el título */
+  display: flex;  /* Usamos flexbox para alinear el logo y el título */
+  flex-direction: column;  /* Alinea los elementos (logo y título) en una columna */
+  align-items: flex-start;  /* Alinea los elementos a la izquierda */
   padding: 30px 20px;  /* Espaciado dentro del header */
   background-color: #fff;  /* Fondo blanco */
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);  /* Sombra suave */
 }
 
 .logo-container {
-  flex-shrink: 0; /* Evita que el logo se reduzca de tamaño en el contenedor */
+  flex-shrink: 0; /* Evita que el logo se reduzca de tamaño */
 }
 
 .logo-container img {
@@ -362,15 +362,14 @@ header h1 {
   color: #2c2c2c;
   margin: 0;  /* Elimina el margen por defecto del h1 */
   letter-spacing: 1px;  /* Espaciado entre las letras */
-  margin-left: 20px;  /* Espacio entre el logo y el título */
+  margin-top: 10px; /* Añade un poco de espacio después del logo */
 }
-/* ===== Navegación debajo del logo y título ===== */
+
+/* ===== Navegación debajo del título ===== */
 nav.ribbon {
   display: flex;
-  justify-content: center; /* Centra las pestañas dentro del nav */
-  gap: 18px;
-  flex-wrap: wrap;
-  width: 100%; /* Asegura que ocupe todo el ancho del header */
+  justify-content: flex-start;  /* Alinea las pestañas a la izquierda */
+  gap: 18px;  /* Espacio entre las pestañas */
   margin-top: 15px;  /* Espacio entre el título y las pestañas */
 }
 
@@ -395,7 +394,6 @@ nav.ribbon a.active {
   color: #222;
   font-weight: 600;
 }
-
 /* RESPONSIVE: En pantallas pequeñas, los elementos del header se apilan */
 @media (max-width: 768px) {
   .header-logo {
@@ -415,4 +413,5 @@ nav.ribbon a.active {
     margin-top: 10px;
   }
 }
+
 
