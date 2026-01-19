@@ -92,6 +92,8 @@ main {
 /* ===== Proceso ===== */
 .proceso h3 {
   margin-top: 20px; /* Ajusta el valor según lo que necesites */
+  text-align: justify;
+  text-justify: inter-word;
 }
 /* ===== Papelería  ===== */
 .papeleria-page {
@@ -328,6 +330,7 @@ footer {
   margin: 20px auto;   /* CLAVE: centra el bloque */
   line-height: 1.9;
 }
+
 
 
 
