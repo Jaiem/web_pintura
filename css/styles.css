@@ -368,14 +368,16 @@ footer {
 
 /* ===== Contenedor para las pestañas de navegación debajo del logo y título ===== */
 .nav-container {
-  width: 100%;
+  width: 100%;  /* Asegura que el contenedor ocupe todo el ancho */
   margin-top: 15px;  /* Espacio entre el logo y el menú de navegación */
+  display: flex;
+  justify-content: center;  /* Centra las pestañas debajo del logo */
 }
 
 /* ===== Navegación debajo del logo y título ===== */
 nav.ribbon {
   display: flex;
-  justify-content: center; /* Centra la barra de navegación */
+  justify-content: center; /* Centra las pestañas dentro del nav */
   gap: 18px;
   flex-wrap: wrap;
 }
