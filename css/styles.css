@@ -320,6 +320,11 @@ footer {
   transform: scale(1.04);
 }
 
+/* Texto narrativo del proceso */
+.proceso .intro p {
+  text-align: justify;
+  text-justify: inter-word;
+}
 
 
 
