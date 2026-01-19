@@ -336,12 +336,16 @@ footer {
 
 /* ===== HEADER CON LOGO Y TÍTULO ===== */
 .header-logo {
-  display: flex;  /* Usamos flexbox para alinear el logo y el título en una fila */
-  flex-direction: column;  /* Apilamos el logo y título en una columna */
-  align-items: flex-start;  /* Alinea todo a la izquierda */
   padding: 30px 20px;  /* Espaciado dentro del header */
   background-color: #fff;  /* Fondo blanco */
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);  /* Sombra suave */
+}
+
+/* Contenedor para logo y título */
+.logo-title-container {
+  display: flex;  /* Usamos flexbox para alinear el logo y el título en una fila */
+  flex-direction: row;  /* Alinea el logo y el título horizontalmente */
+  align-items: center;  /* Centra verticalmente el logo y el título */
 }
 
 .logo-container {
@@ -360,7 +364,7 @@ header h1 {
   font-family: 'Playfair Display', serif;
   font-size: 3rem;
   color: #2c2c2c;
-  margin: 0 0 10px 20px;  /* Elimina el margen superior y agrega espacio entre el logo y el título */
+  margin: 0 0 0 20px;  /* Elimina el margen superior y agrega espacio entre el logo y el título */
   letter-spacing: 1px;  /* Espaciado entre las letras */
 }
 
@@ -369,7 +373,7 @@ nav.ribbon {
   display: flex;
   justify-content: flex-start;  /* Alinea las pestañas a la izquierda */
   gap: 18px;  /* Espacio entre las pestañas */
-  margin-top: 10px;  /* Espacio entre el título y las pestañas */
+  margin-top: 15px;  /* Espacio entre el título y las pestañas */
 }
 
 nav.ribbon a {
@@ -412,6 +416,7 @@ nav.ribbon a.active {
     margin-top: 10px;
   }
 }
+
 
 
 
