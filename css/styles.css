@@ -334,13 +334,13 @@ footer {
   line-height: 1.9;
 }
 
-/* ===== HEADER CON LOGO Y TÍTULO A LA DERECHA ===== */
+/* ===== HEADER CON LOGO Y TÍTULO ===== */
 .header-logo {
   display: flex;
-  flex-direction: row;  /* Logo y título alineados horizontalmente */
-  align-items: center;  /* Centra verticalmente el logo y el título */
-  justify-content: flex-start; /* Alinea los elementos a la izquierda */
-  gap: 20px;  /* Espacio entre el logo y el título */
+  flex-direction: column;  /* Logo y título apilados verticalmente */
+  align-items: center;  /* Centra los elementos horizontalmente */
+  justify-content: center; /* Centra los elementos en el header */
+  gap: 10px;  /* Espacio entre el logo, el título y las pestañas */
   padding: 30px 20px;
   background-color: #fff;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
@@ -361,12 +361,13 @@ footer {
   border: 2px solid #b59b82; /* Borde decorativo opcional */
 }
 
-/* ===== Contenedor para las pestañas de navegación debajo del logo y título ===== */
-.nav-container {
-  width: 100%;  /* Asegura que el contenedor ocupe todo el ancho */
-  margin-top: 15px;  /* Espacio entre el logo y el menú de navegación */
-  display: flex;
-  justify-content: center;  /* Centra las pestañas debajo del logo */
+/* Título */
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: #2c2c2c;
+  margin: 0;
+  letter-spacing: 1px;  /* Ajuste de espaciado para el título */
 }
 
 /* ===== Navegación debajo del logo y título ===== */
@@ -375,6 +376,8 @@ nav.ribbon {
   justify-content: center; /* Centra las pestañas dentro del nav */
   gap: 18px;
   flex-wrap: wrap;
+  width: 100%; /* Asegura que ocupe todo el ancho del header */
+  margin-top: 15px;  /* Espacio entre el título y las pestañas */
 }
 
 nav.ribbon a {
@@ -402,7 +405,7 @@ nav.ribbon a.active {
 /* RESPONSIVE: En pantallas pequeñas, los elementos del header se apilan */
 @media (max-width: 768px) {
   .header-logo {
-    flex-direction: column; /* En pantallas pequeñas, el logo y el título se apilan */
+    flex-direction: column; /* En pantallas pequeñas, el logo, título y pestañas se apilan */
     align-items: center;  /* Centra los elementos */
     text-align: center;   /* Alinea el texto al centro */
     gap: 10px;
@@ -413,13 +416,8 @@ nav.ribbon a.active {
     height: 60px;
   }
 
-  .nav-container {
-    width: 100%;
-    margin-top: 10px;
-  }
-
   nav.ribbon {
-    justify-content: center; /* Centra la barra de navegación */
+    justify-content: center; /* Centra las pestañas en pantallas pequeñas */
     margin-top: 10px;
   }
 }
