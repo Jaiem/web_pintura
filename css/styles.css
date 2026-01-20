@@ -219,7 +219,16 @@ footer {
   background-color: #fff;
   width: 100%;
 }
-
+.contacto-directo h2{
+  font-family: 'Playfair Display', serif;  /* Aseguramos el tipo de letra */
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 20px;
+  
+}
+.contacto-directo p{
+  margin-bottom: 20px;
+}
 /* Estilo para el formulario de contacto */
 .formulario-contacto {
   display: flex;
@@ -402,6 +411,7 @@ footer {
   margin: 20px auto;
   line-height: 1.9;
 }
+
 
 
 
