@@ -158,8 +158,9 @@ main {
   background-color: #f6f2ec;
   border: none;
   border-radius: 12px;
+  font-family: 'Playfair Display', serif;  /* Aseguramos el tipo de letra */
+  font-weight: 300;
   cursor: pointer;
-  font-weight: 600;
   color: #4a4a4a;
   font-size: 1.1rem;
   transition: all 0.3s;
@@ -389,6 +390,7 @@ footer {
   margin: 20px auto;
   line-height: 1.9;
 }
+
 
 
 
