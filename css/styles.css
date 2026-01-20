@@ -14,8 +14,8 @@ body {
   background-color: #fdfaf6;
   color: #333;
   line-height: 1.75;
-  margin: 50px; /* Eliminar márgenes */
-  padding: 0; /* Eliminar relleno */
+  margin: 0; /* Eliminar márgenes */
+  padding: 50px; /* Eliminar relleno */
 }
 
 /* ===== Header ===== */
@@ -389,6 +389,7 @@ footer {
   margin: 20px auto;
   line-height: 1.9;
 }
+
 
 
 
