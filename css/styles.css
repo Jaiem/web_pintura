@@ -137,6 +137,7 @@ main {
 }
 
 .papeleria h3 {
+  font-family: 'Playfair Display', serif;  /* Aseguramos el tipo de letra */
   margin-top: 20px;
 }
 
@@ -391,6 +392,7 @@ footer {
   margin: 20px auto;
   line-height: 1.9;
 }
+
 
 
 
