@@ -388,7 +388,7 @@ footer {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 2rem;
-  margin: 5rem 0;
+  margin: 2rem 0;
 }
 
 .galeria-proceso img {
@@ -411,6 +411,7 @@ footer {
   margin: 20px auto;
   line-height: 1.9;
 }
+
 
 
 
