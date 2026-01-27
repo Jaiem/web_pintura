@@ -80,47 +80,124 @@
 </footer>
 
 <script>
-  function mostrarDescripcion(item) {
-    var descripcion = '';
-    
-    switch (item) {
-      case 'minutas':
-        descripcion = '<p>Las minutas personalizadas para cada mesa, con un toque elegante y único, que complementa perfectamente el estilo de tu boda.</p>';
-        break;
-      case 'meseros':
-        descripcion = '<p> 100% artesanales y totalmente personalizables. Diseñados para reflejar tu estilo único, gustos y aficiones, permiten compartir con tus invitados un toque personal y creativo. Cada detalle es elaborado con esmero para hacer de tu evento una experiencia inolvidable.</p>';
-        break;
-      case 'marcasitios':
-        descripcion = '<p>Marcasitios personalizados que no solo guiarán a tus invitados, sino que serán el detalle perfecto para que tu boda se vea única.</p>';
-        break;
-       case 'numeros':
-        descripcion = '<p>Para ofrecer un toque único y elegante a tu evento. Los números de zapatos y la señalética no sólo cumplen una función práctica, sino que también aportan distinción y estilo, reflejando tu personalidad y atención al detalle en cada rincón de la celebración.</p>';
-        break;
-      case 'regalos':
-        descripcion = '<p>Regalos personalizados hechos a mano, perfectos para dejar una huella inolvidable en tus invitados. Un detalle único que reflejará el amor de tu boda.</p>';
-        break;
-    }
+function mostrarDescripcion(item) {
+  let descripcion = '';
+  let imagenes = [];
 
-    // Mostrar descripción
-    const contenedor = document.getElementById('descripcion');
-    contenedor.innerHTML = descripcion;
+  switch (item) {
 
-    // Quitar active de todos los botones
-    document.querySelectorAll('.categoria').forEach(btn => {
-      btn.classList.remove('active');
-    });
+    case 'minutas':
+      descripcion = `
+        <p>
+          Las minutas personalizadas para cada mesa, con un toque elegante y único,
+          hechas a mano y adaptadas al estilo de vuestra boda.
+        </p>
+      `;
+      imagenes = [
+        'img/PapeleriaBoda/PB Minuta1.jpg',
+        'img/PapeleriaBoda/PB Minuta3.jpg',
+        'img/PapeleriaBoda/PB Minuta4.jpg',
+        'img/PapeleriaBoda/PB Minuta6.jpg',
+        'img/PapeleriaBoda/PB Minuta7.jpg',
+        'img/PapeleriaBoda/PB MINUTA8.jpg'
+      ];
+      break;
 
-    // Marcar botón activo
-    event.target.classList.add('active');
+    case 'meseros':
+      descripcion = `
+        <p>
+          Meseros y seating plan 100% artesanales y totalmente personalizables,
+          pensados para guiar y sorprender a tus invitados.
+        </p>
+      `;
+      imagenes = [
+        'img/PapeleriaBoda/PB Seating1.jpg',
+        'img/PapeleriaBoda/PB Seating2.jpg',
+        'img/PapeleriaBoda/PB Seating3.jpg',
+        'img/PapeleriaBoda/PB Seating5.jpg',
+        'img/PapeleriaBoda/PB Seating6.jpg',
+        'img/PapeleriaBoda/PB Seating7.jpg'
+      ];
+      break;
 
-    // Scroll suave en móvil
-    if (window.innerWidth <= 768) {
-      contenedor.scrollIntoView({ behavior: 'smooth' });
-    }
+    case 'marcasitios':
+      descripcion = `
+        <p>
+          Marcasitios personalizados que aportan coherencia, estilo
+          y un recuerdo especial para cada invitado.
+        </p>
+      `;
+      imagenes = [
+        'img/PapeleriaBoda/PB Etiquetas1.jpg',
+        'img/PapeleriaBoda/PB Etiquetas2.jpg',
+        'img/PapeleriaBoda/PB Etiquetas3.jpg',
+        'img/PapeleriaBoda/PB Etiquetas4.jpg',
+        'img/PapeleriaBoda/PB Etiquetas7.jpg',
+        'img/PapeleriaBoda/PB Etiquetas8.jpg'
+      ];
+      break;
+
+    case 'numeros':
+      descripcion = `
+        <p>
+          Cartelería y señalización pensadas para guiar con elegancia,
+          cuidando cada rincón del espacio.
+        </p>
+      `;
+      imagenes = [
+        'img/PapeleriaBoda/PB Cartelería1.jpg',
+        'img/PapeleriaBoda/PB Cartelería2.jpg',
+        'img/PapeleriaBoda/PB Cartelería3.jpg',
+        'img/PapeleriaBoda/PB Cartelería5.jpg',
+        'img/PapeleriaBoda/PB Cartelería6.jpg',
+        'img/PapeleriaBoda/PB Cartelería8.jpg'
+      ];
+      break;
+
+    case 'regalos':
+      descripcion = `
+        <p>
+          Regalos personalizados hechos a mano, pensados para emocionar
+          y dejar huella en tus invitados.
+        </p>
+      `;
+      imagenes = [
+        'img/PapeleriaBoda/PB Regalos1.jpg',
+        'img/PapeleriaBoda/PB Regalos2.jpg',
+        'img/PapeleriaBoda/PB Regalos3.jpg',
+        'img/PapeleriaBoda/PB Regalos4.jpg',
+        'img/PapeleriaBoda/PB Regalos5.jpg',
+        'img/PapeleriaBoda/PB Regalos6.jpg',
+        'img/PapeleriaBoda/PB Regalos7.jpg',
+        'img/PapeleriaBoda/PB Regalos8.jpg',
+        'img/PapeleriaBoda/PB Regalos9.jpg'
+      ];
+      break;
   }
+
+  let galeriaHTML = '<div class="galeria-papeleria">';
+  imagenes.forEach(img => {
+    galeriaHTML += `<img src="${img}" alt="">`;
+  });
+  galeriaHTML += '</div>';
+
+  const contenedor = document.getElementById('descripcion');
+  contenedor.innerHTML = descripcion + galeriaHTML;
+
+  document.querySelectorAll('.categoria').forEach(btn => {
+    btn.classList.remove('active');
+  });
+
+  event.target.classList.add('active');
+
+  if (window.innerWidth <= 768) {
+    contenedor.scrollIntoView({ behavior: 'smooth' });
+  }
+}
 </script>
 
 </html>
+
 
 
 
