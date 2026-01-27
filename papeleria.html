@@ -194,9 +194,28 @@ function mostrarDescripcion(item) {
     contenedor.scrollIntoView({ behavior: 'smooth' });
   }
 }
+
+  function abrirLightbox(src) {
+  const lightbox = document.getElementById('lightbox');
+  const imagen = document.querySelector('.lightbox-imagen');
+
+  imagen.src = src;
+  lightbox.style.display = 'flex';
+}
+
+document.querySelector('.lightbox-cerrar').addEventListener('click', () => {
+  document.getElementById('lightbox').style.display = 'none';
+});
+
+document.getElementById('lightbox').addEventListener('click', e => {
+  if (e.target.id === 'lightbox') {
+    e.currentTarget.style.display = 'none';
+  }
+});
 </script>
 
 </html>
+
 
 
 
