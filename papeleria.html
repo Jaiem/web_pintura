@@ -182,7 +182,7 @@ function mostrarDescripcion(item) {
 
   let galeriaHTML = '<div class="galeria-papeleria">';
   imagenes.forEach(img => {
-    galeriaHTML += `<img src="${img}" alt="">`;
+    galeriaHTML += `<img src="${img}" alt="" onclick="abrirLightbox('${img}')">`;
   });
   galeriaHTML += '</div>';
 
@@ -220,6 +220,7 @@ document.getElementById('lightbox').addEventListener('click', e => {
 </script>
 
 </html>
+
 
 
 
