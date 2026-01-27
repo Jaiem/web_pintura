@@ -92,6 +92,10 @@
 </footer>
 
 <script>
+
+  document.addEventListener('DOMContentLoaded', () => {
+  /* TODO tu código del lightbox y mostrarDescripcion aquí */
+
 /* ==========================
    VARIABLES GLOBALES LIGHTBOX
 ========================== */
@@ -201,8 +205,7 @@ function mostrarDescripcion(item, boton) {
   imagenes.forEach(img => {
     galeriaHTML += `
       <img src="${img}" alt=""
-        onclick="abrirLightbox('${img}', ${JSON.stringify(imagenes)})">
-    `;
+      onclick="abrirLightbox('${img}', ${JSON.stringify(imagenes).replace(/'/g, "\\'")})"    `;
   });
   galeriaHTML += '</div>';
 
@@ -278,8 +281,9 @@ document.getElementById('lightbox')
     }
   });
 </script>
-
+});
 </html>
+
 
 
 
