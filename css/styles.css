@@ -27,7 +27,7 @@ body {
 .descripcion p,
 .hero-contenido h2,
 .hero-contenido p,
-.proceso h3,
+.proceso h3 p,
 .subribbon-vertical .categoria {
   text-align: center;      /* Centrar horizontalmente */
   line-height: 2;           /* Aumentar el espacio entre líneas */
@@ -136,15 +136,9 @@ main {
 .proceso h3 {
   font-family: 'Playfair Display', serif;  /* Aseguramos el tipo de letra */
   font-size: 1.4rem;
-  margin: 30px 0 10px 0;
-  max-width: 720px;
   font-weight: 500;      /* negrita */
   letter-spacing: 0.08em;
   position: relative;
-  text-align: center;      /* Centrar horizontalmente */
-  line-height: 2;           /* Aumentar el espacio entre líneas */
-}
-.proceso p {
   text-align: center;      /* Centrar horizontalmente */
   line-height: 2;           /* Aumentar el espacio entre líneas */
 }
@@ -495,4 +489,5 @@ footer {
 .galeria-proceso img:hover {
   transform: scale(1.04);
 }
+
 
