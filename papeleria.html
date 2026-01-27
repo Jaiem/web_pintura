@@ -106,7 +106,6 @@ function mostrarDescripcion(item, boton) {
   let imagenes = [];
 
   switch (item) {
-
     case 'minutas':
       descripcion = `
         <p>
@@ -198,16 +197,30 @@ function mostrarDescripcion(item, boton) {
 
   /* Construir galería */
   let galeriaHTML = '<div class="galeria-papeleria">';
-  imagenes.forEach(img => {
-    galeriaHTML += `
-      <img src="${img}" alt=""
-        onclick="abrirLightbox('${img}', ${JSON.stringify(imagenes)})">
-    `;
+  imagenes.forEach((img, index) => {
+    galeriaHTML += `<img src="${img}" alt="" class="galeria-item">`;
   });
   galeriaHTML += '</div>';
 
   const contenedor = document.getElementById('descripcion');
   contenedor.innerHTML = descripcion + galeriaHTML;
+
+  /* Botón activo */
+  document.querySelectorAll('.categoria').forEach(btn => btn.classList.remove('active'));
+  boton.classList.add('active');
+
+  /* Agregar eventos click a las imágenes de la galería */
+  const galeriaItems = contenedor.querySelectorAll('.galeria-item');
+  galeriaItems.forEach((imgEl) => {
+    imgEl.addEventListener('click', () => abrirLightbox(imgEl.src, imagenes));
+  });
+
+  /* Scroll automático en móviles */
+  if (window.innerWidth <= 768) {
+    contenedor.scrollIntoView({ behavior: 'smooth' });
+  }
+}
+
 
   /* Botón activo */
 document.querySelectorAll('.categoria').forEach(btn => {
@@ -280,3 +293,4 @@ document.getElementById('lightbox')
 </script>
 
 </html>
+
