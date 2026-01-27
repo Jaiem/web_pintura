@@ -22,7 +22,16 @@ body {
   margin: 0; /* Eliminar márgenes */
   padding: 50px; /* Eliminar relleno */
 }
-
+  body,
+.intro p,
+.descripcion p,
+.hero-contenido h2,
+.hero-contenido p,
+.proceso h3,
+.subribbon-vertical .categoria {
+  text-align: center;      /* Centrar horizontalmente */
+  line-height: 2;           /* Aumentar el espacio entre líneas */
+}
 /* ===== Header ===== */
 header {
   background-color: #fff;
@@ -414,6 +423,7 @@ footer {
   margin: 20px auto;
   line-height: 1.9;
 }
+
 
 
 
