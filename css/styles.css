@@ -135,7 +135,6 @@ main {
   max-width: 720px;
   font-weight: 500;      /* negrita */
   letter-spacing: 0.08em;
-  text-align: left;
   position: relative;
   padding-left: 25px;    /* espacio para la flecha */
 }
@@ -423,6 +422,7 @@ footer {
   margin: 20px auto;
   line-height: 1.9;
 }
+
 
 
 
