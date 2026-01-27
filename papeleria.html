@@ -70,11 +70,13 @@
     <div class="papeleria-page">
 
   <div class="subribbon-vertical">
-    <button class="categoria" onclick="mostrarDescripcion('minutas')">Minutas</button>
-    <button class="categoria" onclick="mostrarDescripcion('meseros')">Meseros y Seating Plan</button>
-    <button class="categoria" onclick="mostrarDescripcion('marcasitios')">Marcasitios</button>
-    <button class="categoria" onclick="mostrarDescripcion('numeros')">Cartelería y Señalización</button>
-    <button class="categoria" onclick="mostrarDescripcion('regalos')">Regalos personalizados</button>
+    
+    <button class="categoria" onclick="mostrarDescripcion('minutas', this)">Minutas</button>
+    <button class="categoria" onclick="mostrarDescripcion('meseros', this)">Meseros y Seating Plan</button>
+    <button class="categoria" onclick="mostrarDescripcion('marcasitios', this)">Marcasitios</button>
+    <button class="categoria" onclick="mostrarDescripcion('numeros', this)">Cartelería y Señalización</button>
+    <button class="categoria" onclick="mostrarDescripcion('regalos', this)">Regalos personalizados</button>
+
   </div>
 
   <!-- Aquí aparecerá la descripción -->
@@ -99,7 +101,7 @@ let indiceActual = 0;
 /* ==========================
    MOSTRAR DESCRIPCIÓN + GALERÍA
 ========================== */
-function mostrarDescripcion(item) {
+function mostrarDescripcion(item, boton) {
   let descripcion = '';
   let imagenes = [];
 
@@ -208,10 +210,11 @@ function mostrarDescripcion(item) {
   contenedor.innerHTML = descripcion + galeriaHTML;
 
   /* Botón activo */
-  document.querySelectorAll('.categoria').forEach(btn => {
-    btn.classList.remove('active');
-  });
-  event.target.classList.add('active');
+document.querySelectorAll('.categoria').forEach(btn => {
+  btn.classList.remove('active');
+});
+boton.classList.add('active');
+
 
   if (window.innerWidth <= 768) {
     contenedor.scrollIntoView({ behavior: 'smooth' });
@@ -277,6 +280,7 @@ document.getElementById('lightbox')
 </script>
 
 </html>
+
 
 
 
