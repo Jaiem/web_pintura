@@ -6,7 +6,14 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-
+  
+<div id="lightbox" class="lightbox">
+  <span class="lightbox-cerrar">&times;</span>
+  <button class="lightbox-flecha izquierda">&#10094;</button>
+  <img class="lightbox-imagen" src="" alt="">
+  <button class="lightbox-flecha derecha">&#10095;</button>
+</div>
+  
 <header class="header-logo">
   <div class="logo-title-container"> <!-- Contenedor para logo y título -->
     <div class="logo-container">
@@ -124,9 +131,77 @@
 <footer>
   <p>© 2026 Un Prado Blanco</p>
 </footer>
+<script>
+/* ==========================
+   VARIABLES GLOBALES LIGHTBOX
+========================== */
+let grupoImagenes = [];
+let indiceActual = 0;
 
+/* ==========================
+   ABRIR LIGHTBOX
+========================== */
+function abrirLightbox(src, grupo) {
+  grupoImagenes = grupo;
+  indiceActual = grupo.indexOf(src);
+
+  document.querySelector('.lightbox-imagen').src = src;
+  document.getElementById('lightbox').style.display = 'flex';
+  document.body.classList.add('lightbox-activo');
+}
+
+/* ==========================
+   NAVEGACIÓN
+========================== */
+function siguienteImagen() {
+  indiceActual = (indiceActual + 1) % grupoImagenes.length;
+  document.querySelector('.lightbox-imagen').src = grupoImagenes[indiceActual];
+}
+
+function anteriorImagen() {
+  indiceActual = (indiceActual - 1 + grupoImagenes.length) % grupoImagenes.length;
+  document.querySelector('.lightbox-imagen').src = grupoImagenes[indiceActual];
+}
+
+/* ==========================
+   EVENTOS LIGHTBOX
+========================== */
+document.querySelector('.lightbox-flecha.derecha').addEventListener('click', e => {
+  e.stopPropagation();
+  siguienteImagen();
+});
+
+document.querySelector('.lightbox-flecha.izquierda').addEventListener('click', e => {
+  e.stopPropagation();
+  anteriorImagen();
+});
+
+document.querySelector('.lightbox-cerrar').addEventListener('click', () => {
+  document.getElementById('lightbox').style.display = 'none';
+  document.body.classList.remove('lightbox-activo');
+});
+
+document.getElementById('lightbox').addEventListener('click', e => {
+  if (e.target.id === 'lightbox') {
+    e.currentTarget.style.display = 'none';
+    document.body.classList.remove('lightbox-activo');
+  }
+});
+
+/* ==========================
+   GALERÍA PROCESO
+========================== */
+document.querySelectorAll('.galeria-proceso').forEach(galeria => {
+  const imgs = Array.from(galeria.querySelectorAll('img')).map(img => img.src);
+
+  galeria.querySelectorAll('img').forEach(imgEl => {
+    imgEl.addEventListener('click', () => abrirLightbox(imgEl.src, imgs));
+  });
+});
+</script>
 </body>
 </html>
+
 
 
 
