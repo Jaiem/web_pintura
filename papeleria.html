@@ -90,6 +90,15 @@
 </footer>
 
 <script>
+/* ==========================
+   VARIABLES GLOBALES LIGHTBOX
+========================== */
+let grupoImagenes = [];
+let indiceActual = 0;
+
+/* ==========================
+   MOSTRAR DESCRIPCIÓN + GALERÍA
+========================== */
 function mostrarDescripcion(item) {
   let descripcion = '';
   let imagenes = [];
@@ -185,19 +194,23 @@ function mostrarDescripcion(item) {
       break;
   }
 
+  /* Construir galería */
   let galeriaHTML = '<div class="galeria-papeleria">';
   imagenes.forEach(img => {
-    galeriaHTML += `<img src="${img}" alt="" onclick="abrirLightbox('${img}')">`;
+    galeriaHTML += `
+      <img src="${img}" alt=""
+        onclick="abrirLightbox('${img}', ${JSON.stringify(imagenes)})">
+    `;
   });
   galeriaHTML += '</div>';
 
   const contenedor = document.getElementById('descripcion');
   contenedor.innerHTML = descripcion + galeriaHTML;
 
+  /* Botón activo */
   document.querySelectorAll('.categoria').forEach(btn => {
     btn.classList.remove('active');
   });
-
   event.target.classList.add('active');
 
   if (window.innerWidth <= 768) {
@@ -205,29 +218,66 @@ function mostrarDescripcion(item) {
   }
 }
 
-function abrirLightbox(src) {
-  const lightbox = document.getElementById('lightbox');
-  const imagen = document.querySelector('.lightbox-imagen');
+/* ==========================
+   ABRIR LIGHTBOX
+========================== */
+function abrirLightbox(src, grupo) {
+  grupoImagenes = grupo;
+  indiceActual = grupo.indexOf(src);
 
-  imagen.src = src;
-  lightbox.style.display = 'flex';
+  document.querySelector('.lightbox-imagen').src = src;
+  document.getElementById('lightbox').style.display = 'flex';
   document.body.classList.add('lightbox-activo');
 }
 
-document.querySelector('.lightbox-cerrar').addEventListener('click', () => {
-  document.getElementById('lightbox').style.display = 'none';
-  document.body.classList.remove('lightbox-activo');
-});
+/* ==========================
+   NAVEGACIÓN
+========================== */
+function siguienteImagen() {
+  indiceActual = (indiceActual + 1) % grupoImagenes.length;
+  document.querySelector('.lightbox-imagen').src =
+    grupoImagenes[indiceActual];
+}
 
-document.getElementById('lightbox').addEventListener('click', e => {
-  if (e.target.id === 'lightbox') {
-    e.currentTarget.style.display = 'none';
+function anteriorImagen() {
+  indiceActual =
+    (indiceActual - 1 + grupoImagenes.length) % grupoImagenes.length;
+  document.querySelector('.lightbox-imagen').src =
+    grupoImagenes[indiceActual];
+}
+
+/* ==========================
+   EVENTOS LIGHTBOX
+========================== */
+document.querySelector('.lightbox-flecha.derecha')
+  .addEventListener('click', e => {
+    e.stopPropagation();
+    siguienteImagen();
+  });
+
+document.querySelector('.lightbox-flecha.izquierda')
+  .addEventListener('click', e => {
+    e.stopPropagation();
+    anteriorImagen();
+  });
+
+document.querySelector('.lightbox-cerrar')
+  .addEventListener('click', () => {
+    document.getElementById('lightbox').style.display = 'none';
     document.body.classList.remove('lightbox-activo');
-  }
-});
+  });
+
+document.getElementById('lightbox')
+  .addEventListener('click', e => {
+    if (e.target.id === 'lightbox') {
+      e.currentTarget.style.display = 'none';
+      document.body.classList.remove('lightbox-activo');
+    }
+  });
 </script>
 
 </html>
+
 
 
 
