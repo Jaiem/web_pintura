@@ -221,19 +221,6 @@ function mostrarDescripcion(item, boton) {
   }
 }
 
-
-  /* Botón activo */
-document.querySelectorAll('.categoria').forEach(btn => {
-  btn.classList.remove('active');
-});
-boton.classList.add('active');
-
-
-  if (window.innerWidth <= 768) {
-    contenedor.scrollIntoView({ behavior: 'smooth' });
-  }
-}
-
 /* ==========================
    ABRIR LIGHTBOX
 ========================== */
@@ -293,4 +280,5 @@ document.getElementById('lightbox')
 </script>
 
 </html>
+
 
