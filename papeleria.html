@@ -201,26 +201,30 @@ function mostrarDescripcion(item) {
   }
 }
 
-  function abrirLightbox(src) {
+function abrirLightbox(src) {
   const lightbox = document.getElementById('lightbox');
   const imagen = document.querySelector('.lightbox-imagen');
 
   imagen.src = src;
   lightbox.style.display = 'flex';
+  document.body.classList.add('lightbox-activo');
 }
 
 document.querySelector('.lightbox-cerrar').addEventListener('click', () => {
   document.getElementById('lightbox').style.display = 'none';
+  document.body.classList.remove('lightbox-activo');
 });
 
 document.getElementById('lightbox').addEventListener('click', e => {
   if (e.target.id === 'lightbox') {
     e.currentTarget.style.display = 'none';
+    document.body.classList.remove('lightbox-activo');
   }
 });
 </script>
 
 </html>
+
 
 
 
