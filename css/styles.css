@@ -218,7 +218,25 @@ main {
   font-style: italic;
   color: #555;
 }
+/* ===== Galería papelería ===== */
+.galeria-papeleria {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 30px;
+}
 
+.galeria-papeleria img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 4px;
+  transition: transform 0.4s ease;
+}
+
+.galeria-papeleria img:hover {
+  transform: scale(1.04);
+}
 /* ===== Footer ===== */
 footer {
   text-align: center;
@@ -422,6 +440,7 @@ footer {
   margin: 20px auto;
   line-height: 1.9;
 }
+
 
 
 
