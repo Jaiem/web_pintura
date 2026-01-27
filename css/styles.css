@@ -237,6 +237,33 @@ main {
 .galeria-papeleria img:hover {
   transform: scale(1.04);
 }
+/* ===== Lightbox ===== */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 4px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+.lightbox-cerrar {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 3rem;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 300;
+}
 /* ===== Footer ===== */
 footer {
   text-align: center;
@@ -440,6 +467,7 @@ footer {
   margin: 20px auto;
   line-height: 1.9;
 }
+
 
 
 
