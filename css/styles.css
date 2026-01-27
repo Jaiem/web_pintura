@@ -496,12 +496,3 @@ footer {
   transform: scale(1.04);
 }
 
-/* ===== TEXTO NARRATIVO PROCESO ===== */
-.proceso .intro p {
-  text-align: justify;
-  text-justify: inter-word;
-  max-width: 100%;
-  margin: 20px auto;
-  line-height: 1.9;
-}
-
