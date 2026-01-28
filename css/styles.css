@@ -1,41 +1,54 @@
-/* ===== Importar fuentes elegantes ===== */
+/* ===============================
+   FUENTES
+================================ */
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Playfair+Display:wght@400;700&display=swap');
+
 @font-face {
   font-family: 'adelia';
   src: url('../fonts/adelia.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
-/* ===== Reset básico ===== */
+
+/* ===============================
+   RESET
+================================ */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ===== Body y tipografía ===== */
+/* ===============================
+   BODY Y TIPOGRAFÍA GLOBAL
+================================ */
 body {
   font-family: 'Lora', serif;
   background-color: #fdfaf6;
   color: #333;
   line-height: 1.75;
-  margin: 0; /* Eliminar márgenes */
-  padding: 50px; /* Eliminar relleno */
+  margin: 0;
+  padding: 50px;
 }
-  body,
+
+body,
 .intro p,
 .descripcion p,
 .hero-contenido h2,
 .hero-contenido p,
 .proceso h3 p,
 .subribbon-vertical .categoria {
-  text-align: center;      /* Centrar horizontalmente */
-  line-height: 2;           /* Aumentar el espacio entre líneas */
+  text-align: center;
+  line-height: 2;
 }
+
 body.lightbox-activo {
   overflow: hidden;
 }
-/* ===== Header ===== */
+
+/* ===============================
+   HEADER
+================================ */
 header {
   background-color: #fff;
   padding: 30px 20px;
@@ -44,19 +57,19 @@ header {
 
 header h1 {
   font-family: 'adelia', cursive;
-  font-size: 3rem;              /* mantenemos tu tamaño */
-  font-weight: normal;          /* importante para script */
-  letter-spacing: 0.02em;       /* mucho más sutil */
+  font-size: 3rem;
+  font-weight: normal;
+  letter-spacing: 0.02em;
   color: #2c2c2c;
   margin: 0 0 0 20px;
 }
 
-/* ===== Contenedor logo y título ===== */
+/* Logo + título */
 .logo-title-container {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 20px; /* Espacio entre el logo y el título */
+  gap: 20px;
 }
 
 .logo-container {
@@ -71,11 +84,14 @@ header h1 {
   border: 2px solid #b59b82;
 }
 
+/* ===============================
+   NAVEGACIÓN
+================================ */
 nav.ribbon {
   display: flex;
   justify-content: flex-start;
-  gap: 18px;
   flex-wrap: wrap;
+  gap: 18px;
   margin-top: 15px;
 }
 
@@ -101,70 +117,77 @@ nav.ribbon a.active {
   font-weight: 600;
 }
 
-/* ===== Main ===== */
+/* ===============================
+   MAIN
+================================ */
 main {
-  max-width: 100%; /* Usar el 100% del ancho disponible */
-  margin: 0 auto; /* Centrado con márgenes automáticos */
+  max-width: 100%;
+  margin: 0 auto;
   padding: 20px;
 }
 
-/* ===== Introducción ===== */
+/* ===============================
+   INTRODUCCIÓN
+================================ */
 .intro {
-  margin: 0; /* Reducir margen */
+  margin: 0;
 }
 
 .intro h2 {
-  font-family: 'Playfair Display', serif;  /* Aseguramos el tipo de letra */
+  font-family: 'Playfair Display', serif;
   font-size: 2rem;
   font-weight: 300;
   margin-bottom: 30px;
   padding-left: 12px;
   color: #5b4d4b;
- }
+}
 
 .intro p {
   font-size: 1.18rem;
   color: #555;
   font-style: italic;
-  max-width: 100%; /* Aprovechar todo el espacio disponible */
+  max-width: 100%;
   margin-top: 10px;
-  line-height: 1.8; /* Aumentar altura de línea para mejor legibilidad */
+  line-height: 1.8;
 }
 
-/* ===== Proceso ===== */
+/* ===============================
+   PROCESO
+================================ */
 .proceso h3 {
-  font-family: 'Playfair Display', serif;  /* Aseguramos el tipo de letra */
+  font-family: 'Playfair Display', serif;
   font-size: 1.4rem;
-  font-weight: 500;      /* negrita */
+  font-weight: 500;
   letter-spacing: 0.08em;
   position: relative;
-  text-align: center;      /* Centrar horizontalmente */
-  line-height: 2;           /* Aumentar el espacio entre líneas */
+  text-align: center;
+  line-height: 2;
 }
 
-
-/* ===== Papelería ===== */
+/* ===============================
+   PAPELERÍA
+================================ */
 .papeleria-page {
   display: flex;
-  justify-content: flex-start;
-  gap: 30px;
   align-items: flex-start;
-  margin: 0; /* Eliminar márgenes */
-  padding: 0; /* Eliminar relleno */
+  gap: 30px;
+  margin: 0;
+  padding: 0;
 }
 
 .papeleria h3 {
-  font-family: 'Playfair Display', serif;  /* Aseguramos el tipo de letra */
+  font-family: 'Playfair Display', serif;
   margin-top: 20px;
 }
 
+/* Submenú lateral */
 .subribbon-vertical {
   display: flex;
   flex-direction: column;
   gap: 15px;
   width: 220px;
-  background-color: #f6f2ec;
   padding: 20px;
+  background-color: #f6f2ec;
   border-radius: 10px;
   position: sticky;
   top: 30px;
@@ -176,11 +199,11 @@ main {
   background-color: #f6f2ec;
   border: none;
   border-radius: 12px;
-  font-family: 'Playfair Display', serif;  /* Aseguramos el tipo de letra */
+  font-family: 'Playfair Display', serif;
   font-weight: 300;
-  cursor: pointer;
-  color: #4a4a4a;
   font-size: 1.1rem;
+  color: #4a4a4a;
+  cursor: pointer;
   transition: all 0.3s;
   text-align: left;
 }
@@ -195,18 +218,17 @@ main {
   color: #222;
 }
 
-/* Descripción que aparece al lado del menú lateral */
+/* Descripción */
 .descripcion {
   flex-grow: 1;
-  font-size: 1.15rem;
-  color: #555;
-  padding: 0 15px;
-  background-color: transparent;
-  border: none;
-  margin-top: 0;
   width: 100%;
   max-width: calc(100% - 240px);
-  box-sizing: border-box;
+  padding: 0 15px;
+  font-size: 1.15rem;
+  color: #555;
+  margin-top: 0;
+  border: none;
+  background-color: transparent;
 }
 
 .descripcion p {
@@ -214,7 +236,10 @@ main {
   font-style: italic;
   color: #555;
 }
-/* ===== Galería papelería ===== */
+
+/* ===============================
+   GALERÍA PAPELERÍA
+================================ */
 .galeria-papeleria {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -234,16 +259,14 @@ main {
   transform: scale(1.04);
 }
 
-/* =============================== 
-   PAPELERÍA – hero 
+/* ===============================
+   HERO PAPELERÍA
 ================================ */
 .hero-papeleria {
   position: relative;
   width: 100%;
   height: 75vh;
-  background-image: url("../img/PapeleriaBoda/Imagen-cabecera -papeleria.jpg");
-  background-size: cover;
-  background-position: center;
+  background: url("../img/PapeleriaBoda/Imagen-cabecera -papeleria.jpg") center / cover;
 }
 
 .hero-papeleria::before {
@@ -253,16 +276,16 @@ main {
   background: rgba(255, 255, 255, 0.25);
 }
 
-
-/* ===== Lightbox ===== */
+/* ===============================
+   LIGHTBOX
+================================ */
 .lightbox {
   position: fixed;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100vw;
   height: 100vh;
-  padding: 0;               /* ← clave */
   margin: 0;
+  padding: 0;
   background: rgba(0, 0, 0, 0.85);
   display: none;
   align-items: center;
@@ -273,11 +296,9 @@ main {
 .lightbox-imagen {
   max-width: 85vw;
   max-height: 85vh;
-  width: auto;
-  height: auto;
   object-fit: contain;
   border-radius: 4px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
 }
 
 .lightbox-cerrar {
@@ -288,17 +309,17 @@ main {
   color: #fff;
   cursor: pointer;
 }
-/* Flechas lightbox */
+
 .lightbox-flecha {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   background: none;
   border: none;
-  color: white;
+  color: #fff;
   font-size: 3rem;
-  cursor: pointer;
   padding: 10px 20px;
+  cursor: pointer;
   opacity: 0.7;
   transition: opacity 0.3s;
 }
@@ -307,15 +328,12 @@ main {
   opacity: 1;
 }
 
-.lightbox-flecha.izquierda {
-  left: 30px;
-}
+.lightbox-flecha.izquierda { left: 30px; }
+.lightbox-flecha.derecha { right: 30px; }
 
-.lightbox-flecha.derecha {
-  right: 30px;
-}
-
-/* ===== Footer ===== */
+/* ===============================
+   FOOTER
+================================ */
 footer {
   text-align: center;
   padding: 40px 15px;
@@ -326,133 +344,75 @@ footer {
   background-color: #fff;
   width: 100%;
 }
-.contacto-directo h2{
-  font-family: 'Playfair Display', serif;  /* Aseguramos el tipo de letra */
+
+/* ===============================
+   CONTACTO
+================================ */
+.contacto-directo h2 {
+  font-family: 'Playfair Display', serif;
   font-size: 1.5rem;
   font-weight: 300;
   margin-bottom: 20px;
-  
 }
-.contacto-directo p{
+
+.contacto-directo p {
   margin-bottom: 20px;
 }
-/* Estilo para el formulario de contacto */
+
 .formulario-contacto {
   display: flex;
   flex-direction: column;
   gap: 20px;
   max-width: 600px;
   padding: 20px;
+  margin-left: 0;
+  margin-right: auto;
   background-color: #f6f2ec;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  margin-left: 0;
-  margin-right: auto;
 }
 
-/* Estilo para cada campo de entrada (input y textarea) */
 .formulario-contacto input,
 .formulario-contacto textarea {
+  width: 100%;
   padding: 12px;
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 8px;
   background-color: #fff;
   color: #333;
-  width: 100%;
-  box-sizing: border-box;
   transition: border-color 0.3s ease;
 }
 
-/* Cambio de color al enfocar los campos de entrada */
 .formulario-contacto input:focus,
 .formulario-contacto textarea:focus {
   border-color: #d6c8b6;
   outline: none;
 }
 
-/* Estilo para el botón de envío */
 .formulario-contacto button {
   padding: 12px 20px;
   font-size: 1.1rem;
   border: none;
-  background-color: #d6c8b6;
-  color: white;
   border-radius: 8px;
+  background-color: #d6c8b6;
+  color: #fff;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
-/* Efecto hover en el botón */
 .formulario-contacto button:hover {
   background-color: #b59b82;
 }
 
-/* Ajustes para pantallas pequeñas */
-@media (max-width: 768px) {
-  .papeleria-page {
-    flex-direction: column;
-    margin: 0;
-  }
-
-  .subribbon-vertical {
-    width: 100%;
-    max-width: 100%;
-    padding: 10px;
-  }
-
-  .descripcion {
-    margin-top: 10px;
-    width: 100%;
-    max-width: 100%;
-  }
-
-  body {
-    padding: 0;
-  }
-
-  .header-logo {
-    padding: 20px 15px;
-  }
-
-  .hero-proceso {
-    height: 50vh;
-  }
-
-  .hero-contenido h2 {
-    font-size: 2.5rem;
-  }
-
-  .hero-contenido p {
-    font-size: 1rem;
-  }
-
-  .galeria-proceso {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 1.5rem;
-  }
-
-  .logo-container img {
-    width: 60px;
-    height: 60px;
-  }
-
-  nav.ribbon {
-    justify-content: center;
-    margin-top: 10px;
-  }
-}
-
-/* =============================== 
-   PROCESO ARTESANAL – hero 
+/* ===============================
+   HERO PROCESO
 ================================ */
 .hero-proceso {
   position: relative;
   width: 100%;
   height: 75vh;
-  background-image: url("../img/procesoArtesanal/1 HORIZONTAL.jpg");
-  background-size: cover;
-  background-position: center;
+  background: url("../img/procesoArtesanal/1 HORIZONTAL.jpg") center / cover;
 }
 
 .hero-proceso::before {
@@ -465,13 +425,13 @@ footer {
 .hero-contenido {
   position: relative;
   height: 100%;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  padding: 2rem;
   color: #2e2e2e;
+  text-align: center;
 }
 
 .hero-contenido h2 {
@@ -488,8 +448,8 @@ footer {
   font-weight: 300;
 }
 
-/* =============================== 
-   GALERÍAS DE IMÁGENES
+/* ===============================
+   GALERÍA PROCESO
 ================================ */
 .galeria-proceso {
   display: grid;
@@ -510,6 +470,53 @@ footer {
   transform: scale(1.04);
 }
 
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+  body { padding: 0; }
 
+  .papeleria-page {
+    flex-direction: column;
+  }
 
+  .subribbon-vertical,
+  .descripcion {
+    width: 100%;
+    max-width: 100%;
+  }
 
+  .subribbon-vertical {
+    padding: 10px;
+  }
+
+  .descripcion {
+    margin-top: 10px;
+  }
+
+  .logo-container img {
+    width: 60px;
+    height: 60px;
+  }
+
+  nav.ribbon {
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .hero-proceso {
+    height: 50vh;
+  }
+
+  .hero-contenido h2 {
+    font-size: 2.5rem;
+  }
+
+  .hero-contenido p {
+    font-size: 1rem;
+  }
+
+  .galeria-proceso {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
